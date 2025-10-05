@@ -954,3 +954,130 @@
 // let natija = x1 === x2 || y1 === y2;
 
 // console.log( natija);
+
+// ================================ Shartlar
+
+// 34 - masala
+
+// Shart: (x, y) koordinata beriladi (1–8). Katak oqmi yoki qora ekanligini aniqlash.
+
+// Algoritm:
+
+// Koordinatalarni kiritamiz: x, y.
+
+// Agar (x + y) yig‘indisi juft bo‘lsa → katak qora.
+
+// Agar (x + y) yig‘indisi toq bo‘lsa → katak oq.
+
+// Kod:
+// let x = +prompt('x ni kiriting (1–8):');
+// let y = +prompt('y ni kiriting (1–8):');
+
+// let oqMaydon = (x + y) % 2 !== 0;
+
+// console.log('Natija:', oqMaydon ? "Oq" : "Qora");
+
+// ✅ Masalan: (1,1) → (1+1)=2 juft → qora.
+
+// ♟️ 35 – masala
+
+// Shart: Ikki maydon berilgan (x1,y1) va (x2,y2). Ular bir xil rangdami?
+
+// Algoritm:
+
+// (x1 + y1) ning parity (juft/toqligini) tekshirish.
+
+// (x2 + y2) parity sini tekshirish.
+
+// Agar ikkalasi teng bo‘lsa → bir xil rang.
+
+// Kod:
+// let x1 = +prompt('Birinchi maydon x1:');
+// let y1 = +prompt('Birinchi maydon y1:');
+// let x2 = +prompt('Ikkinchi maydon x2:');
+// let y2 = +prompt('Ikkinchi maydon y2:');
+
+// let birXilRang = (x1 + y1) % 2 === (x2 + y2) % 2;
+
+// console.log('Natija:', birXilRang);
+
+// ✅ Masalan: (1,1) va (2,2) → ikkisi ham qora.
+
+// ♟️ 36 – masala (Ruh – rook)
+
+// Shart: Ruh faqat bir xil qator yoki ustun bo‘ylab yuradi.
+
+// Algoritm:
+
+// (x1 === x2) → bir ustun.
+
+// (y1 === y2) → bir qator.
+
+// Shu shartlardan biri bajarilsa → yuradi.
+
+// Kod:
+// let ruhYuraOladi = x1 === x2 || y1 === y2;
+
+// ✅ Masalan: (1,1) → (1,8) → to‘g‘ri.
+
+// ♟️ 37 – masala (Shoh – king)
+
+// Shart: Shoh faqat yonidagi 1 qadamga yuradi.
+
+// Algoritm:
+
+// |x1 - x2| ≤ 1 → maksimal 1 qadam yonma-yon.
+
+// |y1 - y2| ≤ 1.
+
+// Agar ikkisi ham to‘g‘ri bo‘lsa → yuradi.
+
+// Kod:
+// let shohYuraOladi = Math.abs(x1 - x2) <= 1 && Math.abs(y1 - y2) <= 1;
+
+// ✅ Masalan: (4,4) → (5,5) → to‘g‘ri.
+
+// ♟️ 38 – masala (Fil – bishop)
+
+// Shart: Fil faqat diagonal bo‘ylab yuradi.
+
+// Algoritm:
+
+// Agar |x1 - x2| === |y1 - y2| bo‘lsa → yuradi.
+
+// Kod:
+// let filYuraOladi = Math.abs(x1 - x2) === Math.abs(y1 - y2);
+
+// ✅ Masalan: (2,2) → (5,5) → diagonal bo‘yicha.
+
+// ♟️ 39 – masala (Farzin – queen)
+
+// Shart: Farzin ruh + fil kabi yuradi.
+
+// Algoritm:
+
+// Agar (x1 === x2 || y1 === y2) → to‘g‘ri.
+
+// Yoki |x1 - x2| === |y1 - y2| → diagonal.
+
+// Shulardan biri bajarilsa → yuradi.
+
+// Kod:
+// let farzinYuraOladi =
+//   x1 === x2 || y1 === y2 || Math.abs(x1 - x2) === Math.abs(y1 - y2);
+
+// ✅ Masalan: (1,1) → (8,8) yoki (1,1) → (1,8).
+
+// ♟️ 40 – masala (Ot – knight)
+
+// Shart: Ot “L” shaklida yuradi: 2 qadam yo‘nalish + 1 qadam yon.
+
+// Algoritm:
+
+// Agar |x1 - x2| === 2 va |y1 - y2| === 1.
+
+// Yoki |x1 - x2| === 1 va |y1 - y2| === 2.
+
+// Shunda ot yuradi.
+
+
