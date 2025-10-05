@@ -463,6 +463,22 @@
 // let b = +prompt('2-sonni kiriting:');
 // let c = +prompt('3-sonni kiriting:');
 
+// if (a == b) {
+// 	alert('3');
+// } else if (a == c) {
+// 	alert('2');
+// } else if (b == c) {
+// 	alert('1');
+// } else {
+// 	alert("o'zaro sonlar teng bo'lmaganda");
+// }
+
+// 19 - masala;
+
+// let a = +prompt('1-sonni kiriting:');
+// let b = +prompt('2-sonni kiriting:');
+// let c = +prompt('3-sonni kiriting:');
+
 // 24 - masala;
 
 // let x = +prompt('Son kiritng: ');
@@ -470,4 +486,13 @@
 // 	console.log(2 * Math.sin(x));
 // } else if (x <= 0) {
 // 	console.log(x - 6);
+// }
+
+// 25 - masala;
+
+// let x = +prompt('Son kiritng: ');
+// if (x < -2 || x > 2) {
+// 	alert(2 * x);
+// } else {
+// 	alert(-3 * x);
 // }
