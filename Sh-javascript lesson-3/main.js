@@ -343,7 +343,7 @@
 
 // alert('Eng kichik son: ' + min);
 
-// 13 - masala ⭕
+// 13 - masala 🔴
 
 // let a = +prompt('1 Son kiriting: ');
 // let b = +prompt('2 Son kiriting: ');
@@ -375,7 +375,7 @@
 
 // alert('O‘rtadagi son: ' + middle);
 
-// 14 - masala; ⭕
+// 14 - masala; 🔴
 
 // let a = +prompt('1-sonni kiriting:');
 // let b = +prompt('2-sonni kiriting:');
@@ -473,11 +473,57 @@
 // 	alert("o'zaro sonlar teng bo'lmaganda");
 // }
 
-// 19 - masala;
+// 19 - masala;🔴
 
 // let a = +prompt('1-sonni kiriting:');
 // let b = +prompt('2-sonni kiriting:');
 // let c = +prompt('3-sonni kiriting:');
+// let d = +prompt('4-sonni kiriting:');
+
+// if (a == b && b == c && c != d) {
+// 	alert('D 4 tartib son');
+// } else if (d == b && b == c && c != a) {
+// 	alert('A 4 tartib son');
+// } else if (d == b && b == c && c != a) {
+// 	alert('C 4 tartib son');
+// } else {
+// 	alert('B 4 ta tartib son ');
+// }
+
+// ======================================
+
+// if (a == b && b == c && c != d) {
+// 	alert('4-son (d) boshqacha');
+// } else if (a == b && b == d && d != c) {
+// 	alert('3-son (c) boshqacha');
+// } else if (a == c && c == d && d != b) {
+// 	alert('2-son (b) boshqacha');
+// } else if (b == c && c == d && d != a) {
+// 	alert('1-son (a) boshqacha');
+// } else {
+// 	alert('Bunday holat yo‘q');
+// }
+
+// 20 - masala;
+
+// let a = +prompt('1-sonni kiriting:');
+// let b = +prompt('2-sonni kiriting:');
+// let c = +prompt('3-sonni kiriting:');
+
+// let AB_masofa = Math.abs(a - b);
+// let AC_masofa = Math.abs(a - c);
+
+// if (AB_masofa < AC_masofa) {
+// 	alert(`B nuqta A ga eng yaqin. Masofa: ${AB_masofa}`);
+// } else if (AB_masofa > AC_masofa) {
+// 	alert(`C nuqta A ga eng yaqin. Masofa: ${AC_masofa}`);
+// } else {
+// 	alert(`B va C nuqtalar A dan bir xil masofada joylashgan (${AB_masofa})`);
+// }
+
+// 21 - masala;⭕
+// 22 - masala;⭕
+// 23 - masala;⭕
 
 // 24 - masala;
 
@@ -495,4 +541,150 @@
 // 	alert(2 * x);
 // } else {
 // 	alert(-3 * x);
+// }
+
+// 26 - masala;
+
+// let x = +prompt('Son kiriting: ');
+
+// if (x <= 0) {
+// 	alert(-x);
+// } else if (0 < x && x < 2) {
+// 	alert(x ** 2);
+// } else if (x >= 2) {
+// 	alert(4);
+// }
+
+// 27 - masala;⭕
+
+// let x = +prompt('Son kiriting: ');
+
+// 28 - masala;⭕
+
+// let yil = +prompt('Son kiriting: ');
+// yil = yil > 0;
+
+// 29 - masala;
+
+// let son = +prompt('Son kiritng: ');
+
+// if (son > 0 && son % 2 == 1) {
+// 	alert('Berilgan son musbat toq son');
+// } else if (son < 0 && son % 2 == 0) {
+// 	alert('Berilgan son manfiy juft son');
+// } else if (son == 0) {
+// 	alert('Son 0 ga teng');
+// } else {
+// 	alert('Boshqa');
+// }
+
+// 30 - masala;
+
+// let son = +prompt('Son kiriting:');
+
+// let ikkiXonali = son >= 10 && son <= 99;
+// let uchXonali = son >= 100 && son <= 999;
+
+// if (ikkiXonali && son % 2 == 0) {
+// 	alert('Berilgan son ikki xonali juft son');
+// } else if (uchXonali && son % 2 == 0) {
+// 	alert('Berilgan son uch xonali juft son');
+// } else {
+// 	alert('Boshqa holat');
+// }
+
+// =======================================
+
+// 19 - masala
+
+// let a = +prompt('1 - sonni kiritng: ');
+// let b = +prompt('2 - sonni kiritng: ');
+// let c = +prompt('3 - sonni kiritng: ');
+// let d = +prompt('4 - sonni kiritng: ');
+
+// if (a == b && b == c && c != d) {
+// 	alert('4 - son bu D');
+// } else if (a == b && b == d && d != c) {
+// 	alert('3 - son bu C');
+// } else if (a == c && c == d && d != b) {
+// 	alert('2 - son bu B');
+// } else if (b == c && c == d && d != a) {
+// 	alert('1 - son bu A');
+// } else {
+// 	alert("Bunday holat yo'q");
+// }
+
+// 20 - masala
+
+// let a = +prompt('1 - sonni kiritng: ');
+// let b = +prompt('2 - sonni kiritng: ');
+// let c = +prompt('3 - sonni kiritng: ');
+
+// let AB_masofa = Math.abs(a - b);
+// let AC_masofa = Math.abs(a - c);
+
+// if (AB_masofa > AC_masofa) {
+// 	alert(`B nuqta A ga yaqin " ${AB_masofa}`);
+// } else if (AB_masofa < AC_masofa) {
+// 	alert(`C nuqta A ga yaqin " ${AC_masofa}`);
+// } else {
+// 	alert(`Bu holatta C va B nuqtalar teng joylashgan ${AB_masofa}`);
+// }
+
+// 30 - masala
+
+// let son = +prompt('Son kiriting:');
+
+// let birXonli = son >= 1 && son <= 9;
+// let ikkiXonali = son >= 10 && son <= 99;
+// let uchXonali = son >= 100 && son <= 999;
+
+// if (birXonli > 0 && birXonli % 2 != 0) {
+// 	alert('Berilgan son Bir xonali toq son');
+// } else if (birXonli > 0 && birXonli % 2 == 0) {
+// 	alert('Berilgan son Bir xonali juft son');
+// } else if (ikkiXonali > 0 && ikkiXonali % 2 == 0) {
+// 	alert('Berilgan son Ikki xonali juft son');
+// } else if (ikkiXonali > 0 && ikkiXonali % 2 != 0) {
+// 	alert("'Berilgan son Ikki xonali toq son'");
+// } else if (uchXonali > 0 && uchXonali % 2 != 0) {
+// 	alert("'Berilgan son Uch xonali toq son'");
+// } else if (uchXonali > 0 && uchXonali % 2 == 0) {
+// 	alert("'Berilgan son Uch xonali juft son'");
+// } else {
+// 	alert('Boshqa');
+// }
+
+// =========================
+
+// let son = +prompt('Son kiriting:');
+
+// if (son >= 1 && son <= 9) {
+// 	if (son % 2 == 0) {
+// 		alert('Berilgan son bir xonali juft son');
+// 	} else {
+// 		alert('Berilgan son bir xonali toq son');
+// 	}
+// } else if (son >= 10 && son <= 99) {
+// 	if (son % 2 == 0) {
+// 		alert('Berilgan son ikki xonali juft son');
+// 	} else {
+// 		alert('Berilgan son ikki xonali toq son');
+// 	}
+// } else if (son >= 100 && son <= 999) {
+// 	if (son % 2 == 0) {
+// 		alert('Berilgan son uch xonali juft son');
+// 	} else {
+// 		alert('Berilgan son uch xonali toq son');
+// 	}
+// } else {
+// 	alert('Boshqa son kiritildi');
+// }
+
+// function hasBad(str) {
+// 	if ('bad' + str.length(0, 1) == true || str.lenght(0, 2) + 'bad' == true) {
+// 		return true;
+// 	} else {
+// 		return false;
+// 	}
 // }
