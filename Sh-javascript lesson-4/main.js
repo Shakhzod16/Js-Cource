@@ -256,6 +256,31 @@
 user();
  */
 
-function users(soz) {
+// Switch case
 
-}
+// let baholar = +prompt('soz kiritng');
+
+// switch (baholar) {
+// 	case 1:
+// 		console.log('juda yomon');
+// 		break;
+// 	case 2:
+// 		console.log(' yomon');
+// 		break;
+// 	case 3:
+// 			console.log('qoniqarli');
+// 		break;
+// 	case 4:
+// 			console.log('alo');
+// 		break;
+// 	case 5:
+// 		'juda yaxshi';
+// 		console.log(baholar);
+// 		break;
+// 	default:
+// 		console.log('xato');
+// }
+
+// Homework
+
+

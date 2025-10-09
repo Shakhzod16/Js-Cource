@@ -688,3 +688,362 @@
 // 		return false;
 // 	}
 // }
+
+// Homework  🔴🔴🔴
+
+// Shart opertorlariga oid masalalar (1 - 30 masalar) Continue
+
+// 1 - masala
+
+// let Son = +prompt('Son kiritng: ');
+
+// if (Son > 0) {
+// 	alert(Son + 1);
+// } else {
+// 	alert(Son);
+// }
+
+// 2 - masala
+
+// let Son = +prompt('Son kiritng: ');
+
+// if (Son > 0) {
+// 	alert(Son + 1);
+// } else {
+// 	alert(Son - 2);
+// }
+
+// 3 - masala
+
+// let Son = +prompt('Son kiritng: ');
+
+// if (Son > 0) {
+// 	alert(Son + 1);
+// } else if (Son < 0) {
+// 	alert(Son - 2);
+// } else if (Son == 0) {
+// 	alert((Son = 10));
+// }
+
+// 4 - masala
+
+// let a = +prompt('1 - son kriting: ');
+// let b = +prompt('2 - son kriting: ');
+// let c = +prompt('3 - son kriting: ');
+
+// if (a > 0 && b > 0 && c > 0) {
+// 	alert('Bu yerda 3 t musbat son bor');
+// } else if ((a > 0 && b > 0 && c < 0) || (a > 0 && b < 0 && c > 0) || (a < 0 && b > 0 && c > 0)) {
+// 	alert('Bu yerda 2 ta musbat son bor');
+// } else if ((a > 0 && b < 0 && c < 0) || (a < 0 && b > 0 && c < 0) || (a < 0 && b < 0 && c > 0)) {
+// 	alert('Bu yerda 1 ta musbat son bor');
+// } else {
+//   alert("Bularning hammasi manfiy")
+// }
+
+// 5 - masala
+
+// let a = +prompt('1 - son kriting: ');
+// let b = +prompt('2 - son kriting: ');
+// let c = +prompt('3 - son kriting: ');
+
+// if (a > 0 && b > 0 && c > 0) {
+// 	alert('3 ta musbat , 0 ta manfiy');
+// } else if ((a > 0 && b > 0 && c < 0) || (a > 0 && b < 0 && c < 0) || (a < 0 && b < 0 && c > 0)) {
+// 	alert('2 ta musbat 1 ta manfiy');
+// } else if ((a > 0 && b < 0 && c < 0) || (b > 0 && a < 0 && c < 0) || (a < 0 && b < 0 && c > 0)) {
+// 	alert('1 ta musbat , 2 ta manfiy');
+// } else {
+// 	alert('0 ta musbat , 3 ta manfiy');
+// }
+
+// 6 - masala
+
+// let A = +prompt('1 - sonni kiting: ');
+// let B = +prompt('2 - sonni kiting: ');
+
+// if (A > B) {
+// 	alert('A katta son');
+// } else {
+// 	alert('B katta son');
+// }
+
+// 7 - masala
+
+// let A = +prompt('1 - sonni kiting: ');
+// let B = +prompt('2 - sonni kiting: ');
+
+// if (A > B) {
+// 	alert('2 - son');
+// } else {
+// 	alert('1 - son');
+// }
+
+// 8 - masala
+
+// let A = +prompt('1 - sonni kiting: ');
+// let B = +prompt('2 - sonni kiting: ');
+
+// if (A > B) {
+// 	alert(`katta A ${A}`);
+// 	alert(`kichik B ${B}`);
+// } else if (B > A) {
+// 	alert(`katta B ${B}`);
+// 	alert(`kichik A ${A}`);
+// } else {
+// 	alert('Ikkala son teng');
+// }
+
+// 9 - masala
+
+// let a = +prompt('1 sonni kiriting:');
+// let b = +prompt('2 sonni kiriting:');
+
+// if (a > b) {
+// 	let temp = a;
+// 	a = b;
+// 	b = temp;
+// } else {
+// }
+
+// alert(`Kichik son: ${a}, Katta son: ${b}`);
+
+// 10 - masala
+
+// let a = +prompt('1 sonni kiriting:');
+// let b = +prompt('2 sonni kiriting:');
+
+// if (a != b) {
+//   alert(a + b)
+// } else if (a == b) {
+//   alert(0)
+// }
+
+// 11 - masala
+
+// let a = +prompt('1 sonni kiriting:');
+// let b = +prompt('2 sonni kiriting:');
+
+// if (a != b) {
+// 	alert(Math.max(a , b));
+// } else if (a == b) {
+//   alert(0)
+// }
+
+// 12 - masala
+
+// let a = +prompt('1 sonni kiriting:');
+// let b = +prompt('2 sonni kiriting:');
+// let c = +prompt('2 sonni kiriting:');
+
+// alert(Math.min(a, b, c));
+
+// 13 - masala
+
+// let a = +prompt('1 sonni kiriting:');
+// let b = +prompt('2 sonni kiriting:');
+// let c = +prompt('2 sonni kiriting:');
+
+// if ((a > b && a < c) || (a < b && a > c)) {
+// 	alert(`O‘rtacha qiymat: ${a}`);
+// } else if ((b > a && b < c) || (b < a && b > c)) {
+// 	alert(`O‘rtacha qiymat: ${b}`);
+// } else {
+// 	alert(`O‘rtacha qiymat: ${c}`);
+// }
+
+// 14 - masala
+
+// let a = +prompt('1 sonni kiriting:');
+// let b = +prompt('2 sonni kiriting:');
+// let c = +prompt('2 sonni kiriting:')
+
+// if (a >= b && a >= c) {
+// 	max = a;
+// } else if (b >= a && b >= c) {
+// 	max = b;
+// } else {
+// 	max = c;
+// }
+
+// alert('Eng kichik son:', min);
+// alert('Eng katta son:', max);
+
+// 15 - masala
+
+// let a = +prompt('1 sonni kiriting:');
+// let b = +prompt('2 sonni kiriting:');
+// let c = +prompt('2 sonni kiriting:');
+
+// let A = a + b;
+// let B = b + a;
+// let C = b + c;
+
+// alert(Math.max(A, B, C));
+
+// 16 - masala
+
+// let a = +prompt('1 sonni kiriting:');
+// let b = +prompt('2 sonni kiriting:');
+// let c = +prompt('2 sonni kiriting:')
+
+// if (a < b && b < c) {
+// 	alert(a * 2 + ' ' + b * 2 + ' ' + c * 2);
+// } else {
+// 	alert(-a + ' ' + -b + ' ' + -c);
+// }
+
+// 17 - masala;
+
+// let a = +prompt('1-sonni kiriting:');
+// let b = +prompt('2-sonni kiriting:');
+// let c = +prompt('3-sonni kiriting:');
+
+// if (a < b && b < c) {
+// 	alert(a * 2 + ' ' + b * 2 + ' ' + c * 2);
+// } else if (a > b && b > c) {
+//   alert(a * 2 + ' ' + b * 2 + ' ' + c * 2);
+// } else {
+// 	alert(-a + ' ' + -b + ' ' + -c);
+// }
+
+// 18 - masala;
+
+// let a = +prompt('1-sonni kiriting:');
+// let b = +prompt('2-sonni kiriting:');
+// let c = +prompt('3-sonni kiriting:');
+
+// if (a == b) {
+// 	alert('3');
+// } else if (a == c) {
+// 	alert('2');
+// } else if (b == c) {
+// 	alert('1');
+// } else {
+// 	alert("o'zaro sonlar teng bo'lmaganda");
+// }
+
+// 19 - masala;
+
+// let a = +prompt('1-sonni kiriting:');
+// let b = +prompt('2-sonni kiriting:');
+// let c = +prompt('3-sonni kiriting:');
+// let d = +prompt('4-sonni kiriting:');
+
+// if (a == b && b == c && c != d) {
+// 	alert('4-son (d) boshqacha');
+// } else if (a == b && b == d && d != c) {
+// 	alert('3-son (c) boshqacha');
+// } else if (a == c && c == d && d != b) {
+// 	alert('2-son (b) boshqacha');
+// } else if (b == c && c == d && d != a) {
+// 	alert('1-son (a) boshqacha');
+// } else {
+// 	alert('Bunday holat yo‘q');
+// }
+
+// 20 - masala;
+
+// let a = +prompt('1-sonni kiriting:');
+// let b = +prompt('2-sonni kiriting:');
+// let c = +prompt('3-sonni kiriting:');
+
+// let AB_masofa = Math.abs(a - b);
+// let AC_masofa = Math.abs(a - c);
+
+// if (AB_masofa < AC_masofa) {
+// 	alert(`B nuqta A ga eng yaqin. Masofa: ${AB_masofa}`);
+// } else if (AB_masofa > AC_masofa) {
+// 	alert(`C nuqta A ga eng yaqin. Masofa: ${AC_masofa}`);
+// } else {
+// 	alert(`B va C nuqtalar A dan bir xil masofada joylashgan (${AB_masofa})`);
+// }
+
+// 21 - masala;⭕
+// 22 - masala;⭕
+// 23 - masala;⭕
+
+// 24 - masala;
+
+// let x = +prompt('Son kiritng: ');
+// if (x > 0) {
+// 	console.log(2 * Math.sin(x));
+// } else if (x <= 0) {
+// 	console.log(x - 6);
+// }
+
+// 25 - masala;
+
+// let x = +prompt('Son kiritng: ');
+// if (x < -2 || x > 2) {
+// 	alert(2 * x);
+// } else {
+// 	alert(-3 * x);
+// }
+
+// 26 - masala;
+
+// let x = +prompt('Son kiriting: ');
+
+// if (x <= 0) {
+// 	alert(-x);
+// } else if (0 < x && x < 2) {
+// 	alert(x ** 2);
+// } else if (x >= 2) {
+// 	alert(4);
+// }
+
+// 27 - masala;⭕
+
+// let x = +prompt('Son kiriting: ');
+
+// 28 - masala;
+
+// let yil = +prompt('Yilni kiriting:');
+
+// if ((yil % 4 === 0 && yil % 100 !== 0) || yil % 400 === 0) {
+// 	alert(`${yil} - kabisa yili. Unda 366 kun bor.`);
+// } else {
+// 	alert(`${yil} - kabisa yili emas. Unda 365 kun bor.`);
+// }
+
+
+// 29 - masala;
+
+// let son = +prompt('Son kiriting:');
+
+// if (son === 0) {
+// 	alert('Son nolga teng');
+// } else if (son > 0 && son % 2 === 0) {
+// 	alert('Musbat juft son');
+// } else if (son > 0 && son % 2 !== 0) {
+// 	alert('Musbat toq son');
+// } else if (son < 0 && son % 2 === 0) {
+// 	alert('Manfiy juft son');
+// } else {
+// 	alert('Manfiy toq son');
+// }
+
+// 30 - masala
+
+// let son = +prompt('Son kiriting:');
+
+// let birXonli = son >= 1 && son <= 9;
+// let ikkiXonali = son >= 10 && son <= 99;
+// let uchXonali = son >= 100 && son <= 999;
+
+// if (birXonli > 0 && birXonli % 2 != 0) {
+// 	alert('Berilgan son Bir xonali toq son');
+// } else if (birXonli > 0 && birXonli % 2 == 0) {
+// 	alert('Berilgan son Bir xonali juft son');
+// } else if (ikkiXonali > 0 && ikkiXonali % 2 == 0) {
+// 	alert('Berilgan son Ikki xonali juft son');
+// } else if (ikkiXonali > 0 && ikkiXonali % 2 != 0) {
+// 	alert("'Berilgan son Ikki xonali toq son'");
+// } else if (uchXonali > 0 && uchXonali % 2 != 0) {
+// 	alert("'Berilgan son Uch xonali toq son'");
+// } else if (uchXonali > 0 && uchXonali % 2 == 0) {
+// 	alert("'Berilgan son Uch xonali juft son'");
+// } else {
+// 	alert('Boshqa');
+// }
