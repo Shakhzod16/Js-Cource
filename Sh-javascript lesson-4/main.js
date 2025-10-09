@@ -281,6 +281,231 @@ user();
 // 		console.log('xato');
 // }
 
-// Homework
+// Homework Tanlash operatorlaiga oid masalalar
 
+// Case - 1;
 
+// let weekDay = +prompt('Son kiring: ');
+
+// switch (weekDay) {
+// 	case 1:
+// 		alert('Dushanba');
+// 		break;
+// 	case 2:
+// 		alert('Seshanba');
+// 		break;
+// 	case 3:
+// 		alert('Chorshanba');
+// 		break;
+// 	case 4:
+// 		alert('Payshanba');
+// 		break;
+// 	case 5:
+// 		alert('Juma');
+// 		break;
+// 	case 6:
+// 		alert('Shanba');
+// 		break;
+// 	case 7:
+// 		alert('Yakshanba');
+// 		break;
+// 	default:
+// 		alert('Bunday hafta kuni mavjud emas');
+// }
+
+// Case - 2;
+
+// let grade = +prompt('Son kiring: ');
+
+// switch (grade) {
+// 	case 1:
+// 		alert('yomon');
+// 		break;
+// 	case 2:
+// 		alert('qoniqarsiz');
+// 		break;
+// 	case 3:
+// 		alert('qoniqarli');
+// 		break;
+// 	case 4:
+// 		alert('yaxshi');
+// 		break;
+// 	case 5:
+// 		alert("a'lo");
+// 		break;
+// 	default:
+// 		alert('Bunday baho mavjud emas');
+// }
+
+// Case - 3;
+
+// let monthNumber = +prompt('Son kiritng: ');
+
+// switch (monthNumber) {
+// 	case 1:
+// 		alert('1 - oy qish');
+// 		break;
+// 	case 2:
+// 		alert('2 - oy qish');
+// 		break;
+// 	case 3:
+// 		alert('3 - oy bahor');
+// 		break;
+// 	case 4:
+// 		alert('4 - oy bahor');
+// 		break;
+// 	case 5:
+// 		alert('5 - oy bahor');
+// 		break;
+// 	case 6:
+// 		alert('6 - oy yoz');
+// 		break;
+// 	case 7:
+// 		alert('7 - oy yoz');
+// 		break;
+// 	case 8:
+// 		alert('8 - oy yoz');
+// 		break;
+// 	case 9:
+// 		alert('9 - oy kuz');
+// 		break;
+// 	case 10:
+// 		alert('10 - oy kuz');
+// 		break;
+// 	case 11:
+// 		alert('11 - oy kuz');
+// 		break;
+// 	case 12:
+// 		alert('12 - oy qish');
+// 		break;
+// 	default:
+// 		alert('Bunday oy mavjud emas');
+// }
+
+// Case - 4;
+
+// let monthName = +prompt('Son kriting: ');
+
+// switch (monthName) {
+// 	case 1:
+// 		alert('1 - oy: 31 kun bor ');
+// 		break;
+// 	case 2:
+// 		alert('2 - oy: 29 kun bor ');
+// 		break;
+// 	case 3:
+// 		alert('3 - oy: 31 kun bor');
+// 		break;
+// 	case 4:
+// 		alert('4 - oy: 30 kun bor');
+// 		break;
+// 	case 5:
+// 		alert('5 - oy: 31 kun bor');
+// 		break;
+// 	case 6:
+// 		alert('6 - oy: 30 kun bor');
+// 		break;
+// 	case 7:
+// 		alert('7 - oy: 31 kun bor');
+// 		break;
+// 	case 8:
+// 		alert('8 - oy: 30 kun bor');
+// 		break;
+// 	case 9:
+// 		alert('9 - oy: 31 kunbor');
+// 		break;
+// 	case 10:
+// 		alert('10 - oy: 31 kun bor');
+// 		break;
+// 	case 11:
+// 		alert('11 - oy: 30 kun bor');
+// 		break;
+// 	case 12:
+// 		alert('12 - oy: 31 kunbor');
+// 		break;
+// 	default:
+// 		alert('Bunday oy mavjud emas');
+// }
+
+// Case - 5;
+
+// let a = +prompt('1 - sonni kiriting: ');
+// let b = +prompt('2 - sonni kiriting: ');
+// let amal = +prompt(`Amalni tanlang:
+// 1 - qo‘shish
+// 2 - ayirish
+// 3 - bo‘lish
+// 4 - ko‘paytirish`);
+
+// switch (amal) {
+// 	case 1:
+// 		alert(a + b + "1 - qo'shish");
+// 		break;
+// 	case 2:
+// 		alert(a - b + '2 - ayirish');
+// 		break;
+// 	case 3:
+// 		alert(a / b + "3 - bo'lish");
+// 		break;
+// 	case 4:
+// 		alert(a * b + "4 - ko'paytirish");
+// 		break;
+// 	default:
+// 		alert('Xato');
+// }
+
+// Case - 6;
+
+// let length = +prompt('Son kiriting (necha metr?): ');
+// let natija = +prompt(`Meterni quyidagilarga o‘tkazing:
+// 1 - desimetr
+// 2 - kilometr
+// 3 - metr
+// 4 - millimetr`);
+
+// switch (natija) {
+// 	case 1:
+// 		alert(length * 10 + ' desimetr');
+// 		break;
+// 	case 2:
+// 		alert(length / 1000 + ' kilometr');
+// 		break;
+// 	case 3:
+// 		alert(length + ' metr');
+// 		break;
+// 	case 4:
+// 		alert(length * 1000 + ' millimetr');
+// 		break;
+// 	default:
+// 		alert('Xato: 1–4 oralig‘idagi raqamni kiriting!');
+// }
+
+// Case - 7;
+
+// let weight = +prompt('Son kiriting (necha kilogrami ?): ');
+// let natija = +prompt(`Kilogram quyidagilarga o‘tkazing:
+// 1 - kilogramm
+// 2 - milligramm
+// 3 - gram
+// 4 - tonna
+// 5 - setener`);
+
+// switch (natija) {
+// 	case 1:
+// 		alert(weight + ' kilogram');
+// 		break;
+// 	case 2:
+// 		alert(weight / 1000000 + ' milligramm');
+// 		break;
+// 	case 3:
+// 		alert(weight / 1000 +' gram');
+// 		break;
+// 	case 4:
+// 		alert(weight * 1000 + ' tonna');
+// 		break;
+// 	case 5:
+// 		alert(weight * 100 + ' setener');
+// 		break;
+// 	default:
+// 		alert('Xato: 1–5 oralig‘idagi raqamni kiriting!');
+// }
