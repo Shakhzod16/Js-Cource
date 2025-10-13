@@ -1007,7 +1007,6 @@
 // 	alert(`${yil} - kabisa yili emas. Unda 365 kun bor.`);
 // }
 
-
 // 29 - masala;
 
 // let son = +prompt('Son kiriting:');
@@ -1047,3 +1046,18 @@
 // } else {
 // 	alert('Boshqa');
 // }
+
+// ==========
+
+let a = 'helllo';
+// function frontAgain(str) {
+// 	let a = str.slice(0, 1);
+// 	let b = str.slice(-2);
+// 	if (a === b && str.length > 3) {
+// 		return true;
+// 	} else {
+// 		return false;
+// 	}
+// }
+
+console.log(a.slice(-2));

@@ -509,3 +509,33 @@ user();
 // 	default:
 // 		alert('Xato: 1–5 oralig‘idagi raqamni kiriting!');
 // }
+
+// 7 - masala
+
+let weight = +prompt('Son kiritng: ');
+let choose = +prompt(`Tanlang:
+	1 - kilogram
+  2 - milligramm
+  3 - gramm
+  4 - tonna
+  5 - senterner`);
+
+switch (choose) {
+	case 1:
+		alert(weight + "kg");
+		break;
+	case 2:
+		alert(weight / 1000000 + ' kg');
+		break;
+	case 3:
+		alert(weight / 1000 + ' kg');
+		break;
+	case 4:
+		alert(weight * 1000 + ' kg');
+		break;
+	case 5:
+		alert(weight * 100 + ' kg');
+		break;
+	default:
+		alert("Faqat 1 - 5 oralig'dagi sonni kiring");
+}
