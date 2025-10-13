@@ -1,0 +1,117 @@
+🧠 1. For sikli 
+
+for — bu takrorlanadigan ishlarni bajarish uchun ishlatiladigan tsikl (loop).
+Ya’ni bir xil kodni qayta-qayta yozmaslik uchun ishlatiladi.
+
+Masalan:
+
+“1 dan 10 gacha sonlarni chiqarish” uchun 10 ta console.log() yozish o‘rniga, for bilan bitta yoziladi.
+
+⚙️ 2. For siklining tuzilishi (sintaksisi)
+for (boshlanish; shart; o‘zgarish) {
+  // bajariladigan kod
+}
+
+🔹 Misol:
+for (let i = 1; i <= 5; i++) {
+  console.log(i);
+}
+
+
+🧩 Tushuntirish:
+
+let i = 1; — boshlanish: i 1 dan boshlanadi
+
+i <= 5; — shart: i 5 dan kichik yoki teng bo‘lsa, sikl ishlaydi
+
+i++ — o‘zgarish: har safar i 1 taga oshadi
+
+{ console.log(i); } — tanasi (body): sikl ichida bajariladigan amallar
+
+🖥️ Natija:
+
+1
+2
+3
+4
+5
+
+🔁 3. Ishlash jarayoni
+
+Boshlang‘ich qiymat belgilanadi (i = 1)
+
+Shart tekshiriladi (i <= 5)
+
+Shart true bo‘lsa, tanadagi kod bajariladi
+
+O‘zgaruvchi yangilanadi (i++)
+
+Qadamlar 2–4 takrorlanadi, shart false bo‘lganda sikl to‘xtaydi
+
+💡 4. Foydalanish misollari
+➤ Oddiy sonlar chiqarish:
+for (let i = 1; i <= 10; i++) {
+  console.log(i);
+}
+
+➤ Toq sonlar:
+for (let i = 1; i <= 10; i += 2) {
+  console.log(i);
+}
+
+➤ Juft sonlar:
+for (let i = 2; i <= 10; i += 2) {
+  console.log(i);
+}
+
+➤ Yig‘indi topish:
+let sum = 0;
+for (let i = 1; i <= 5; i++) {
+  sum += i;
+}
+console.log(sum); // 15
+
+➤ Faktorial (ko‘paytma):
+let n = 5;
+let result = 1;
+for (let i = 1; i <= n; i++) {
+  result *= i;
+}
+console.log(result); // 120
+
+🧩 5. Cheksiz for sikli
+
+Agar shart yozilmasa, sikl to‘xtamaydi (cheksiz aylanadi):
+
+for (;;) {
+  console.log("cheksiz sikl!");
+}
+
+🚀 6. Muhim operatorlar
+
+break — siklni to‘xtatadi
+
+continue — joriy sikl bosqichini o‘tkazib, keyingisiga o‘tadi
+
+🔹 Misol:
+
+for (let i = 1; i <= 5; i++) {
+  if (i === 3) continue; // 3 ni o‘tkazib yuboradi
+  console.log(i);
+}
+
+
+Natija:
+
+1
+2
+4
+5
+
+🧭 Xulosa
+Qism	Ma’nosi
+for	takrorlash operatori
+let i = 1	boshlang‘ich qiymat
+i <= n	davom ettirish sharti
+i++	qadam (o‘zgarish)
+{ ... }	sikl tanasi (bajariladigan kod)
