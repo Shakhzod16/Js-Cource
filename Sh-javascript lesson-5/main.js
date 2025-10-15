@@ -188,63 +188,80 @@
 
 // let n = +prompt('N sonni kritng: ');
 
-// for (let i = n; i >= 0; i--) {
-// 	console.log(2 * i);
+// for (let i = n; i <= 2 * n; i++) {
+// 	console.log( i);
 // }
 
 // 20 - masala
 
-// let n = +prompt('N sonni kritng: ');
-
-// for (let i = n; i >= 0; i--) {
-// 	console.log(10 * i);
+// let n = +prompt('N sonni kiriting: ');
+// for (let i = n; i <= 10 * n; i++) {
+// 	if (i % 2 == 0) {
+// 		console.log(i);
+// 	}
 // }
 
 // 21 - masala
 
+// let a = 0;
 // for (let i = 1; i <= 10; i++) {
-// 	console.log(i + i);
+// 	a += i;
 // }
+// console.log(a);
 
 // 22 - masala
 
+// let a = 0;
 // for (let i = 20; i <= 30; i++) {
-// 	console.log(i + i);
+// 	a += i;
 // }
+// console.log(a);
 
 // 23 - masala
 
+// let a = 0;
 // for (let i = -100; i <= 100; i++) {
-// 	console.log(i + i);
+// 	a += i;
 // }
+// console.log(a);
 
 // 24 - masala
 
-// let n = +prompt('N sonni kiriting: ');
-// let m = +prompt('M sonni kiriting: ');
+// let n = +prompt('N sonni kiritng: ');
+// let m = +prompt('N sonni kiritng: ');
 
-// for (let i = n; i <= m; i++){
-//     console.log(i+i)
+// let a = 1;
+// for (let i = n; i <= m; i++) {
+// 	a += i;
 // }
+// console.log(a);
 
 // 25 - masala
 
+// let a = 1;
 // for (let i = 1; i <= 10; i++) {
-// 	console.log(i * i);
+// 	a *= i;
 // }
+// console.log(a);
 
 // 26 - masala
 
-// 2420
+// let a = 1;
+// for (let i = 10; i <= 20; i++) {
+// 	a *= i;
+// }
+// console.log(a);
 
 // 27 - masala
 
 // let n = +prompt('N sonni kiritng: ');
 // let m = +prompt('N sonni kiritng: ');
 
+// let a = 1;
 // for (let i = n; i <= m; i++) {
-// 	console.log(i * i);
+// 	a *= i;
 // }
+// console.log(a);
 
 // 28 - masala
 
@@ -453,14 +470,15 @@
 
 // 13 - masala
 
-// let a = +prompt('ayinga son kirit nax: ')
-// let n = +prompt('ngayam suc son kirit nax: ');
-// let arr = []
-// for(let i = )
+// let n = +prompt('Son kiritng: ');
+// let sum = 0;
+// let x = 1;
 
-// arr.forEach(element => {
-
-// });()
+// for (let i = 1; i <= n; i++) {
+// 	sum += (1 + i / 10) * x;
+// 	x = x * -1;
+// }
+// console.log(sum);
 
 // 14 - masala
 
@@ -643,9 +661,3 @@
 // 	natija += 1 / sum;
 // }
 // console.log(natija);
-
-
-
-
-
-
