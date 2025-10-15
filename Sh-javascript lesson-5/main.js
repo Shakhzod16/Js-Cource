@@ -305,20 +305,20 @@
 
 // 30 - masala
 
-for (let n = 2; n <= 100; n++) {
-	let tub = true;
+// for (let n = 2; n <= 100; n++) {
+// 	let tub = true;
 
-	for (let i = 2; i < n; i++) {
-		if (n % i == 0) {
-			tub = false;
-			break;
-		}
-	}
+// 	for (let i = 2; i < n; i++) {
+// 		if (n % i == 0) {
+// 			tub = false;
+// 			break;
+// 		}
+// 	}
 
-	if (tub) {
-		console.log(n);
-	}
-}
+// 	if (tub) {
+// 		console.log(n);
+// 	}
+// }
 
 // 💡 Qudrat Abdurahimov Masalalar (1 - 15 masalalar)
 
