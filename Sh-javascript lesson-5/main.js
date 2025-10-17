@@ -126,46 +126,20 @@
 
 // 17 - masala
 
-// let n = +prompt('N sonni kiritng: ');
-// let m = +prompt('N sonni kiritng: ');
-// for (let i = n; i >= m; i--) {
-// 	console.log(i);
-// }
-
-// ======================
-
 // let n = +prompt('N sonni kiriting: ');
 // let m = +prompt('M sonni kiriting: ');
 
-// if (n > m) {
-// 	for (let i = n; i >= m; i--) {
+// if (m % 2 == 0) {
+// 	for (let i = m; i >= n; i-=2) {
 // 		console.log(i);
 // 	}
 // } else {
-// 	for (let i = n; i <= m; i++) {
-// 		console.log(i);
+// 	for (let i = m; i > n; i-=2) {
+// 		console.log(i-1);
 // 	}
 // }
 
 // 18 - masala
-
-// let n = +prompt('N sonni kiriting: ');
-// let m = +prompt('M sonni kiriting: ');
-// if (n > m) {
-// 	for (let i = n; i >= m; i--) {
-// 		if (i % 2 == 0) {
-// 			console.log(i);
-// 		} else {
-// 			for (let i = n; i <= m; i++) {
-// 				if (i % 2 == 0) {
-// 				}
-// 				console.log(i);
-// 			}
-// 		}
-// 	}
-// }
-
-// ===============================
 
 // let n = +prompt('N sonni kiriting: ');
 // let m = +prompt('M sonni kiriting: ');
@@ -296,29 +270,14 @@
 
 // let n = +prompt('N sonni kiriting: ');
 // let m = +prompt('M sonni kiriting: ');
-
+// let sum = 1;
 // for (let i = n; i <= m; i++) {
 // 	if (i % 2 == 1) {
-// 		console.log(i * i);
-// 	} else {
-// 		for (let i = n; i <= m; i += 2) {
-// 			console.log(i);
-// 		}
+// 		sum *= i;
 // 	}
 // }
 
-// ==========================
-
-// let n = +prompt('N sonni kiriting: ');
-// let m = +prompt('M sonni kiriting: ');
-
-// for (let i = n; i <= m; i++) {
-// 	if (i % 2 == 1) {
-// 		console.log(i * i);
-// 	} else {
-// 		console.log(i);
-// 	}
-// }
+// console.log(sum);
 
 // 30 - masala
 
@@ -396,14 +355,8 @@
 // 6 - masala
 
 // let a = +prompt("son kiriting")
-// for (let i = 1; i <= 2; i+=0.2) {
+// for (let i = 1.2; i <= 2; i+=0.2) {
 // 	console.log(i*a);
-// }
-
-// let a = 5
-// let b = 25
-// for (let i = a; i <= b; i++){
-
 // }
 
 // 7 - masala
@@ -449,21 +402,19 @@
 
 // let n = +prompt('Son kiritng: ');
 // let natija = 0;
-// for (let i = 0; i <= n; i++) {
-// 	let result = (n + i) ** 2;
-//   natija += result;
-//   console.log(natija)
+// for (let i = n; i < 2 * n; i++) {
+// 	sum += i ** 2;
 // }
-// console.log(natija);
+// console.log(sum);
 
 // 12 - masala
 
 // let n = 10;
+// let start = 1.1
 // let natija = 1;
 
-// for (let i = 1.1; i <= n; i += 0.1) {
-// 	natija *= i;
-// 	console.log(i);
+// for (let i = 0; i < n; i++) {
+// 	sum *= start.toFixed(i);
 // }
 
 // console.log(natija);
@@ -514,24 +465,11 @@
 // let n = +prompt('n ni kiriting:');
 // let a = +prompt('a ni kiriting:');
 // let natija = 1;
-// let power = 1;
 
 // for (let i = 1; i <= n; i++) {
-// 	power *= a;
-// 	natija += power;
+// 	natija += Math.pow(a, i);
 // }
 // console.log(natija);
-
-// =================================
-
-// let n = +prompt('n ni kiriting:');
-// let a = +prompt('a ni kiriting:');
-// let sum = 0;
-// for (let i = 1; i <= n; i++) {
-// 	let x = a ** i;
-// 	sum += x;
-// }
-// console.log(sum);
 
 // 18 - masala
 
@@ -539,21 +477,10 @@
 // let a = +prompt('a ni kiriting:');
 // let sum = 1;
 
-// let power = 1;
-// for (let i = 1; i <= n; i++) {
-// 	power *= a;
-// 	sum += Math.pow(-1, i) * power;
+// for (let i = 0; i <= n; i++) {
+// 	sum += Math.pow(-1, i) * Math.pow(a, i);
 // }
-// console.log('Yig‘indi:', sum);
-
-// ==================================
-
-// let n = +prompt('n ni kiriting:');
-// let a = +prompt('a ni kiriting:');
-// let sum = 0
-// for (let i = 1; i <= n; i++){
-// sum+=
-// }
+// console.log(sum);
 
 // 19 - masala
 
@@ -587,7 +514,7 @@
 // 	fact *= i;
 // 	sum += 1 / fact;
 // }
-// console.log('Yig‘indi (e ga yaqin):', sum);
+// console.log(sum);
 
 // 22 - masala
 
@@ -619,7 +546,9 @@
 // console.log('Yig‘indi (sin(x) ga yaqin):', sum);
 
 // 24 - masala
+
 // =========================
+
 // 25 - masala
 
 // let n = +prompt('n ni kiriting:');
@@ -627,37 +556,38 @@
 // let sum = 0;
 
 // for (let i = 1; i <= n; i++) {
-// 	sum += Math.pow(-1, i - 1) * (Math.pow(x, i) / i);
+
+// 	sum += (Math.pow(-1, i - 1) * Math.pow(x, i)) / i;
 // }
-// console.log('Yig‘indi:', sum);
+// console.log(sum);
 
 // 26 - masala
 
-// 27 - masala
+// let x = +prompt('x ni kiriting:');
+// let sum = 0;
 
-// 28 - masala
+// let daraja = 1;
+// let natija = 1;
 
-// 29 - masala
-
-// 30 - masala
-
-// Masalalar
-
-// 1 - masala
-
-// for (let i = 1; i <= 100; i++) {
-// 	console.log(i);
+// for (let i = 1; i <= daraja; i++) {
+// 	natija = natija * x;
 // }
+// sum += natija;
 
-// 2 - masala
-
-// 20 - masala
-
-// let a = 4;
-// let sum = 1;
-// let natija = 0;
-// for (let i = 1; i <= a; i++) {
-// 	sum *= i;
-// 	natija += 1 / sum;
+// daraja = 2;
+// natija = 1;
+// for (let i = 1; i <= daraja; i++) {
+// 	natija = natija * x;
 // }
-// console.log(natija);
+// sum -= natija / 2;
+
+// daraja = 5;
+// natija = 1;
+// for (let i = 1; i <= daraja; i++) {
+// 	natija = natija * x;
+// }
+// sum += natija / 5;
+
+// console.log(sum);
+
+

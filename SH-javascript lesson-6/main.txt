@@ -1,0 +1,175 @@
+🌀 1️⃣ while nima?
+
+while — bu takrorlanadigan amallarni bajarish uchun ishlatiladigan sikl (loop).
+U berilgan shart rost (true) bo‘lguncha ishlaydi.
+
+🧠 2️⃣ Umumiy tuzilmasi:
+while (shart) {
+  // shart true bo‘lsa, shu joydagi kod qayta-qayta ishlaydi
+}
+
+
+shart — bu mantiqiy (true/false) natija beradigan ifoda.
+
+Agar shart true bo‘lsa → sikl ishlaydi
+
+Agar shart false bo‘lsa → sikl to‘xtaydi
+
+⚙️ 3️⃣ Eng oddiy misol:
+let i = 1;
+
+while (i <= 5) {
+  console.log(i);
+  i++; // i ni bittaga oshiramiz, aks holda sikl hech qachon tugamaydi
+}
+
+
+🧩 Tushuntirish:
+
+i = 1 dan boshlaymiz.
+
+i <= 5 sharti rost bo‘lsa → ichidagi kod ishlaydi.
+
+Har safar i++ qilib, i ni 1 taga oshiramiz.
+
+i 6 bo‘lganda, i <= 5 → false, sikl to‘xtaydi.
+
+📤 Natija:
+
+1
+2
+3
+4
+5
+
+🔄 4️⃣ while va for o‘rtasidagi farq:
+for	while
+Takrorlanish soni oldindan ma’lum bo‘lganda ishlatiladi.	Takrorlanish soni noma’lum bo‘lganda ishlatiladi.
+for (boshlanish; shart; o‘zgarish) yoziladi.	while (shart) yoziladi, o‘zgarish ichida qilinadi.
+Kod ixchamroq.	Kod biroz uzunroq.
+🎯 5️⃣ Amaliy misol:
+➤ 1 dan 10 gacha bo‘lgan sonlar yig‘indisini hisoblash:
+let i = 1;
+let sum = 0;
+
+while (i <= 10) {
+  sum += i;
+  i++;
+}
+
+console.log("Yig‘indi:", sum);
+
+
+🧮 Natija: Yig‘indi: 55
+
+⚠️ 6️⃣ Diqqat: cheksiz sikl (infinite loop)
+
+Agar while ichida o‘zgaruvchi o‘zgarmasa, sikl hech qachon tugamaydi 😅
+
+let i = 1;
+while (i <= 5) {
+  console.log(i);
+  // i++ yo‘q! → shuning uchun bu kod hech qachon to‘xtamaydi
+}
+
+
+Shuning uchun har doim o‘zgaruvchini yangilashni unutmang!
+
+======================================
+
+👇
+
+🧠 1️⃣ for ichida for nima o‘zi?
+
+Bu bitta sikl ichida ikkinchi siklni ishlatish degani.
+
+Ya’ni tashqi for har safar bitta aylanish qilganda — ichki for esa to‘liq ishlaydi.
+
+📘 2️⃣ Umumiy tuzilmasi:
+for (let i = 1; i <= n; i++) {          // tashqi for
+  for (let j = 1; j <= m; j++) {        // ichki for
+    // bu joy har i uchun marta ishlaydi
+  }
+}
+
+🔢 3️⃣ Oddiy misol: jadval chiqarish
+
+Masalan, 3×3 jadval yasaymiz:
+
+for (let i = 1; i <= 3; i++) {
+  for (let j = 1; j <= 3; j++) {
+    console.log(`i=${i}, j=${j}`);
+  }
+}
+
+
+🧩 Tushuntirish:
+
+i tashqi sikl → 1 dan 3 gacha yuradi
+
+Har bir i qiymatida, j 1 dan 3 gacha yuradi
+
+Shuning uchun jami 3 × 3 = 9 marta ishlaydi
+
+📤 Natija:
+
+i=1, j=1
+i=1, j=2
+i=1, j=3
+i=2, j=1
+i=2, j=2
+i=2, j=3
+i=3, j=1
+i=3, j=2
+i=3, j=3
+
+🧩 4️⃣ Misol: yulduzchalar (⭐) bilan uchburchak chizish
+for (let i = 1; i <= 5; i++) {
+  let qator = "";
+  for (let j = 1; j <= i; j++) {
+    qator += "* ";
+  }
+  console.log(qator);
+}
+
+
+🧠 Tushuntirish:
+
+Har safar i oshgani sari, ichki forda * soni ham oshadi.
+
+qator o‘zgaruvchisiga yulduzchalar qo‘shilib boradi.
+
+console.log(qator) esa har satrni chiqaradi.
+
+📤 Natija:
+
+*
+* *
+* * *
+* * * *
+* * * * *
+
+🔄 5️⃣ Misol: Ko‘paytirish jadvali (1×1 dan 10×10 gacha)
+for (let i = 1; i <= 10; i++) {
+  for (let j = 1; j <= 10; j++) {
+    console.log(`${i} x ${j} = ${i * j}`);
+  }
+  console.log("--------------"); // har qatordan keyin chiziq
+}
+
+
+📤 Natija (qisqartirilgan):
+
+1 x 1 = 1
+1 x 2 = 2
+...
+--------------
+2 x 1 = 2
+2 x 2 = 4
+...
+
+⚙️ 6️⃣ Tushunchani eslab qolish uchun:
+
+Tashqi for — necha qator bo‘lishini boshqaradi
+
+Ichki for — har bir qator ichidagi elementlarni boshqaradi
