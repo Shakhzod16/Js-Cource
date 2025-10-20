@@ -590,4 +590,68 @@
 
 // console.log(sum);
 
+// ================
+
+// 36 - masala
+
+// let K = +prompt('Son kirting: ');
+// let N = +prompt('Son kirting: ');
+// let sum = 0;
+// for (let i = 1; i <= N; i++) {
+// 	sum += i ** K;
+// }
+// console.log(sum);
+
+// 37 - masala
+
+// let N = +prompt('Son kiriting: ');
+// let sum = 0;
+
+// for (let i = 1; i <= N; i++) {
+// 	let daraja = 1;
+
+// 	for (let j = 1; j <= i; j++) {
+// 		daraja *= i;
+// 	}
+
+// 	sum += daraja;
+// }
+
+// console.log(sum);
+
+// 38 - masala  // -
+
+// let N = +prompt('Son kiriting: ');
+// let sum = 0;
+
+// for (let i = 1; i <= N; i++) {
+// 	if (i == N) {
+// 		N = N - i - 1;
+// 		sum += i ** N;
+// 	} else if (N != i) {
+// 		sum += i ** N - i;
+// 	}
+// }
+
+// console.log(sum);
+
+// ===============================
+
+// let N = +prompt('Son kiriting: ');
+// let sum = 0;
+
+// for (let i = 1; i <= N; i++) {
+// 	let daraja = 1;
+// 	let pow = N - i + 1;
+
+// 	for (let j = 1; j <= pow; j++) {
+// 		daraja *= i;
+// 	}
+
+// 	sum += daraja;
+// }
+
+// console.log(sum);
+
+// 39 - masala
 
