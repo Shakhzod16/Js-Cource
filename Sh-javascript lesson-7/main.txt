@@ -1,0 +1,109 @@
+✅ 1. Function nima?
+
+Function — bu qayta-qayta ishlatish mumkin bo‘lgan kod bloki. Masalan, dasturda bir amalni 10 marta yozmasdan, bitta funksiya yozib, uni 10 marta chaqirsa bo‘ladi.
+
+Oddiy hayotiy misol:
+“Choy qaynatish” funksiyasi bo‘lsa — har safar choy qilish kerak bo‘lganda o‘sha funksiyani chaqiramiz.
+
+✅ 2. Function qanday yaratiladi?
+
+JavaScriptda funksiyaning eng oddiy ko‘rinishi:
+
+function salomBer() {
+  console.log("Assalomu alaykum!");
+}
+
+
+Bu yerda:
+
+Qism	Ma’nosi
+function	Funksiya yaratayotganimizni bildiradi
+salomBer	Funksiya nomi
+{ ... }	Funksiya bajaradigan kod
+✅ 3. Functionni qanday chaqiramiz?
+salomBer();
+
+
+Natija:
+
+Assalomu alaykum!
+
+✅ 4. Parametr (Argument) — funksiyaga qiymat berish
+
+Functionga tashqaridan qiymat kiritish uchun parametr ishlatiladi.
+
+function salomBer(ism) {
+  console.log("Salom " + ism);
+}
+
+salomBer("Shahzod");
+salomBer("Nodira");
+
+
+Natija:
+
+Salom Shahzod
+Salom Nodira
+
+✅ 5. return — funksiyadan qiymat qaytarish
+
+return funksiyaning natijasini tashqariga qaytaradi.
+
+function kvadrat(n) {
+  return n * n;
+}
+
+let result = kvadrat(5);
+console.log(result); // 25
+
+✅ 6. Function turlari
+
+JavaScriptda funksiyalar bir necha xil:
+
+Ko‘rinish	Misol
+Function Declaration	function foo(){}
+Function Expression	const foo = function(){}
+Arrow Function (ES6)	const foo = () => {}
+
+Eng ko‘p ishlatiladigan — Arrow Function:
+
+const kv = (n) => {
+  return n * n;
+};
+console.log(kv(4)); // 16
+
+
+Agar funksiya bitta qatordan iborat bo‘lsa, yanada qisqartiriladi:
+
+const kv = n => n * n;
+console.log(kv(4)); // 16
+
+✅ 7. Nega function kerak?
+
+Funksiya ishlatishning afzalliklari:
+
+✔ qayta-qayta kod yozishni kamaytiradi
+✔ kodni tartibli qiladi
+✔ xatoni topish oson bo‘ladi
+✔ modullashgan, tushunarli dastur bo‘ladi
+
+✅ 8. Amaliy misol
+
+Yig‘indi hisoblovchi funksiya:
+
+function yigindi(a, b) {
+  return a + b;
+}
+
+console.log(yigindi(10, 20)); // 30
+console.log(yigindi(5, 7));   // 12
+
+📌 Xulosa
+
+Function — JS dasturlashning eng muhim qismi. Siz bilishingiz kerak bo'lgan asosiy 4 narsa:
+
+Tushuncha	Bilish kerak
+Function yaratish	function name(){}
+Chaqirish	name()
+Parametr	function name(x) {}
+Return	return x

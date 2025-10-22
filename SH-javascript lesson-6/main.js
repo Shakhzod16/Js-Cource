@@ -461,7 +461,7 @@
 
 // 7 - masala
 
-// let a = +prompt('Son kiritng: ');
+// let a = +prompt('Son kir: ');
 // let b = +prompt('Son kiritng ');
 // let result = 0;
 // let i = a;
