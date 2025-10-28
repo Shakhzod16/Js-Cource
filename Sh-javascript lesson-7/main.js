@@ -288,3 +288,89 @@
 // 	box.style.width = count + "px";
 // 	box.style.height = count + "px";
 // }
+
+// <!-- ======== HOMEWORK - Continue ======= -->
+
+// 1 - Topshiriq
+
+// const box = document.querySelector('.box');
+
+// let topPos = 125;
+// let leftPos = 125;
+
+// function moveUp() {
+// 	if (topPos > 0) {
+// 		topPos -= 20;
+// 		box.style.top = topPos + 'px';
+// 	}
+// }
+
+// function moveDown() {
+// 	if (topPos < 250) {
+// 		topPos += 20;
+// 		box.style.top = topPos + 'px';
+// 	}
+// }
+
+// function moveLeft() {
+// 	if (leftPos > 0) {
+// 		leftPos -= 20;
+// 		box.style.left = leftPos + 'px';
+// 	}
+// }
+
+// function moveRight() {
+// 	if (leftPos < 250) {
+// 		leftPos += 20;
+// 		box.style.left = leftPos + 'px';
+// 	}
+// }
+
+// 2 - Topshiriq
+
+// const inp1 = document.getElementById('inp1');
+// const inp2 = document.getElementById('inp2');
+// const result = document.getElementById('result');
+
+// function plus() {
+// 	let sum = +inp1.value + +inp2.value;
+// 	result.innerHTML = result.innerHTML + sum;
+// }
+
+// function minus() {
+// 	let sum = +inp1.value - +inp2.value;
+// 	result.innerHTML = result.innerHTML + sum;
+// }
+
+// function kop() {
+// 	let sum = +inp1.value * +inp2.value;
+// 	result.innerHTML = result.innerHTML + sum;
+// }
+
+// function bol() {
+// 	let sum = +inp1.value / +inp2.value;
+// 	result.innerHTML = result.innerHTML + sum;
+// }
+
+// 3 - Topshiriq
+
+// const arrow = document.getElementById('arrow');
+// const btn = document.getElementById('rotateBtn');
+// const boxes = document.querySelectorAll('.box');
+
+// let deg = 0;
+
+// btn.onclick = function () {
+// 	deg += 90;
+// 	arrow.style.transform = `translate(-50%, -100%) rotate(${deg}deg)`;
+
+// 	boxes.forEach(b => (b.style.background = '#0f0'));
+
+// 	if (deg % 360 === 0) document.querySelector('.top').style.background = 'red';
+// 	else if (deg % 360 === 90) document.querySelector('.right').style.background = 'red';
+// 	else if (deg % 360 === 180) document.querySelector('.bottom').style.background = 'red';
+// 	else if (deg % 360 === 270) document.querySelector('.left').style.background = 'red';
+// };
+
+
+// document.querySelector('.top').style.background = 'red';
