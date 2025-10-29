@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uz">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Register & Login</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<!-- REGISTER FORM -->
+			<div class="container">
+				<h2>📝 Ro‘yxatdan o‘tish</h2>
+				<form id="user-form">
+					<input type="text" id="username" placeholder="Foydalanuvchi nomi" />
+					<input type="email" id="email" placeholder="Email" />
+					<input type="password" id="password" placeholder="Parol" />
+					<input type="password" id="confirm-password" placeholder="Parolni tasdiqlang" />
+					<button id="submit-btn">Ro‘yxatdan o‘tish</button>
+				</form>
+			</div>
+
+			<!-- LOGIN FORM -->
+			<div class="container">
+				<h2>🔑 Tizimga kirish</h2>
+				<form id="login-form">
+					<input type="text" id="login-username" placeholder="Foydalanuvchi nomi" />
+					<input type="password" id="login-password" placeholder="Parol" />
+					<button id="login-btn">Kirish</button>
+				</form>
+			</div>
+
+			<!-- USERS TABLE -->
+			<div class="container">
+				<h2>📌 Ro‘yxatdagi foydalanuvchilar</h2>
+				<table>
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Username</th>
+							<th>Email</th>
+							<th>Password</th>
+							<th>Date</th>
+						</tr>
+					</thead>
+					<tbody id="users-body"></tbody>
+				</table>
+			</div>
+		</div>
+
+		<script src="main.js"></script>
+	</body>
+</html>

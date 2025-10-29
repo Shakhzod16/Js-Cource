@@ -354,23 +354,37 @@
 
 // 3 - Topshiriq
 
-// const arrow = document.getElementById('arrow');
-// const btn = document.getElementById('rotateBtn');
-// const boxes = document.querySelectorAll('.box');
+// const krug = document.querySelector('.krug');
+// const topBox = document.querySelector('.top');
+// const leftBox = document.querySelector('.left');
+// const rightBox = document.querySelector('.right');
+// const bottomBox = document.querySelector('.bottom');
 
-// let deg = 0;
+// let count = 0;
+// changeByColor();
 
-// btn.onclick = function () {
-// 	deg += 90;
-// 	arrow.style.transform = `translate(-50%, -100%) rotate(${deg}deg)`;
+// function rotateBox() {
+// 	count += 15;
+// 	if (count >= 360) count = 0;
+// 	krug.style.transform = `rotate(${count}deg)`;
+// 	changeByColor();
+// }
 
-// 	boxes.forEach(b => (b.style.background = '#0f0'));
+// function changeByColor() {
 
-// 	if (deg % 360 === 0) document.querySelector('.top').style.background = 'red';
-// 	else if (deg % 360 === 90) document.querySelector('.right').style.background = 'red';
-// 	else if (deg % 360 === 180) document.querySelector('.bottom').style.background = 'red';
-// 	else if (deg % 360 === 270) document.querySelector('.left').style.background = 'red';
-// };
+// 	rightBox.style.backgroundColor = 'white';
+// 	leftBox.style.backgroundColor = 'white';
+// 	topBox.style.backgroundColor = 'white';
+// 	bottomBox.style.backgroundColor = 'white';
 
 
-// document.querySelector('.top').style.background = 'red';
+// 	if (count >= 0 && count < 90) {
+// 		rightBox.style.backgroundColor = 'red';
+// 	} else if (count >= 90 && count < 180) {
+// 		bottomBox.style.backgroundColor = 'red';
+// 	} else if (count >= 180 && count < 270) {
+// 		leftBox.style.backgroundColor = 'red';
+// 	} else if (count >= 270 && count < 360) {
+// 		topBox.style.backgroundColor = 'red';
+// 	}
+// }
