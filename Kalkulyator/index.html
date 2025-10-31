@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="top">
+				<input type="text" placeholder="0" readonly />
+			</div>
+
+			<div class="footer">
+				<div class="first">
+					<button id="black" onclick="clearAll()">AC</button>
+					<button id="black" onclick="toggleSign()">+/-</button>
+					<button id="black" onclick="addValue('%')">%</button>
+					<button id="yellow" onclick="addValue('/')">/</button>
+				</div>
+
+				<div class="first">
+					<button id="white" onclick="addValue('7')">7</button>
+					<button id="white" onclick="addValue('8')">8</button>
+					<button id="white" onclick="addValue('9')">9</button>
+					<button id="yellow" onclick="addValue('*')">*</button>
+				</div>
+
+				<div class="first">
+					<button id="white" onclick="addValue('4')">4</button>
+					<button id="white" onclick="addValue('5')">5</button>
+					<button id="white" onclick="addValue('6')">6</button>
+					<button id="yellow" onclick="addValue('-')">-</button>
+				</div>
+
+				<div class="first">
+					<button id="white" onclick="addValue('1')">1</button>
+					<button id="white" onclick="addValue('2')">2</button>
+					<button id="white" onclick="addValue('3')">3</button>
+					<button id="yellow" onclick="addValue('+')">+</button>
+				</div>
+
+				<div class="first">
+					<button id="long" onclick="addValue('0')">0</button>
+					<button id="white" onclick="addValue('.')">.</button>
+					<button id="yellow" onclick="calculate()">=</button>
+				</div>
+			</div>
+		</div>
+
+		<script src="main.js"></script>
+	</body>
+</html>

@@ -108,33 +108,31 @@
 
 // 2 -topshiriq
 
-let images = document.querySelectorAll('.images img');
-let index = 0;
+// let images = document.querySelectorAll('.images img');
+// let index = 0;
 
-showImage(index);
+// showImage(index);
 
-function showImage(i) {
-	for (let j = 0; j < images.length; j++) {
-		images[j].style.display = 'none';
-	}
+// function showImage(i) {
+// 	for (let j = 0; j < images.length; j++) {
+// 		images[j].style.display = 'none';
+// 	}
 
-	images[i].style.display = 'block';
-}
+// 	images[i].style.display = 'block';
+// }
 
-function next() {
-	index++;
-	if (index >= images.length) {
-		index = 0;
-	}
-	showImage(index);
-}
+// function next() {
+// 	index++;
+// 	if (index >= images.length) {
+// 		index = 0;
+// 	}
+// 	showImage(index);
+// }
 
-function prev() {
-	index--;
-	if (index < 0) {
-		index = images.length - 1;
-	}
-	showImage(index);
-}
-
-
+// function prev() {
+// 	index--;
+// 	if (index < 0) {
+// 		index = images.length - 1;
+// 	}
+// 	showImage(index);
+// }
