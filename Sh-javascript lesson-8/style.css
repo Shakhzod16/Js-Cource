@@ -5,31 +5,35 @@
 }
 
 .container {
+  margin: 0 auto;
+  display: flex;
+}
+.container .btn {
+  display: flex;
+  flex-direction: column;
+  margin: 100px;
+}
+.container .btn button {
+  width: 150px;
+  height: 70px;
+  border: 3px solid blue;
+  font-size: 16px;
+  font-family: sans-serif;
+  margin-top: 20px;
+  font-weight: 900;
+}
+.container .head {
+  margin: 0 auto;
   width: 600px;
   height: 600px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  border: 5px solid black;
-  margin: 0 auto;
-  padding: 20px;
+  border: 5px solid blue;
+  margin: 100px;
 }
-.container .cover {
-  width: 100%;
-  height: 20%;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-align: center;
-}
-.container .cover button {
-  width: 20%;
-  height: 80px;
-  border: 1px solid black;
-}
-.container .box {
-  width: 80%;
-  height: 60%;
-  border: 1px solid black;
-  margin-top: 50px;
+.container .head .images img {
+  width: 590px;
+  height: 590px;
+  display: none;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: opacity 0.5s ease;
 }/*# sourceMappingURL=style.css.map */
