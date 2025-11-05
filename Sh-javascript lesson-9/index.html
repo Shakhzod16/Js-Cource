@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="main">
+			<button onclick="rotateBox()">&#8634;</button>
+
+			<div class="ekran">
+				<div class="top">Top</div>
+				<div class="center">
+					<div class="left">Left</div>
+					<div class="krug">
+						<div class="strelka">&#10230;</div>
+					</div>
+					<div class="right">Right</div>
+				</div>
+				<div class="bottom">Bottom</div>
+			</div>
+		</div>
+
+		<!-- vazifa -->
+
+		<main class="wrap">
+			<h1 class="title">Strelkali tugmalar bilan doira harakati</h1>
+
+			<div class="controls" aria-label="Harakat tugmalari">
+				<button class="btn" id="leftBtn" aria-label="Chapga">◀</button>
+				<button class="btn" id="rightBtn" aria-label="O'nga">▶</button>
+			</div>
+
+			<section class="row" role="list" aria-label="Doira joylashuvi">
+				<div class="card" role="listitem">
+					<div class="dot"></div>
+				</div>
+				<div class="card" role="listitem">
+					<div class="dot"></div>
+				</div>
+				<div class="card" role="listitem">
+					<div class="dot"></div>
+				</div>
+				<div class="card" role="listitem">
+					<div class="dot"></div>
+				</div>
+			</section>
+
+			<p class="hint"></p>
+		</main>
+		<script src="main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,222 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	display: flex;
+	flex-wrap: wrap;
+}
+.main {
+	display: flex;
+	align-items: start;
+}
+
+button {
+	margin: 20px 0 0 20px;
+	width: 100px;
+	height: auto;
+	font-size: 40px;
+	font-weight: 600;
+	border: 3px solid blue;
+	border-radius: 6px;
+}
+
+.ekran {
+	margin: 10px auto;
+	width: 800px;
+	height: auto;
+	border: 4px solid green;
+}
+
+.top {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 10px auto;
+	width: 200px;
+	height: 200px;
+	border: 3px solid black;
+	border-radius: 23px;
+
+	font-size: 30px;
+}
+
+.left {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	height: 200px;
+	border: 3px solid black;
+	border-radius: 23px;
+
+	font-size: 30px;
+}
+
+.krug {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	// border: 4px solid black;
+	border-radius: 50%;
+	font-size: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.strelka {
+	position: absolute;
+	right: 2px;
+}
+
+.right {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	height: 200px;
+	border: 3px solid black;
+	border-radius: 23px;
+	font-size: 30px;
+}
+
+.center {
+	padding: 10px;
+	margin: 10px 0;
+	width: auto;
+	height: auto;
+	display: flex;
+	justify-content: space-between;
+}
+.bottom {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 10px auto;
+	width: 200px;
+	height: 200px;
+	border: 3px solid black;
+	border-radius: 23px;
+	font-size: 30px;
+}
+
+// Homework
+
+$bg: #fbfbfb;
+$card-bg: #fff;
+$stroke: #2b2b2b;
+$muted: #6b6b6b;
+$accent: #e74c3c;
+
+* {
+	box-sizing: border-box;
+}
+:root {
+	font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	font-size: 16px;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	background: linear-gradient(180deg, #ffffff 0%, $bg 100%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 28px;
+	color: $stroke;
+}
+
+.wrap {
+	width: 100%;
+	max-width: 980px;
+	background: #ffffff;
+	border-radius: 14px;
+	padding: 26px;
+	box-shadow: 0 6px 22px rgba(0, 0, 0, 0.06);
+	border: 2px solid rgba(0, 0, 0, 0.06);
+}
+
+.title {
+	margin: 0 0 14px 0;
+	text-align: center;
+	color: $stroke;
+	font-weight: 600;
+	font-size: 18px;
+}
+
+.controls {
+	display: flex;
+	justify-content: center;
+	gap: 12px;
+	margin-bottom: 18px;
+
+	.btn {
+		background: transparent;
+		border: 2px solid rgba(0, 0, 0, 0.12);
+		padding: 8px 14px;
+		border-radius: 10px;
+		font-size: 20px;
+		cursor: pointer;
+		transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+		user-select: none;
+	}
+}
+
+.row {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 22px;
+	align-items: center;
+	padding: 14px 6px;
+}
+
+.card {
+	background: $card-bg;
+	border-radius: 12px;
+	min-height: 120px;
+	border: 2px solid rgba(0, 0, 0, 0.06);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.dot {
+	width: 54px;
+	height: 54px;
+	background: transparent;
+	border-radius: 50%;
+	border: 3px solid rgba(0, 0, 0, 0.18);
+}
+
+.card.active {
+	.dot {
+		background: $accent;
+		border-color: rgba(0, 0, 0, 0.06);
+		transform: scale(1.05);
+	}
+}
+
+@media (max-width: 700px) {
+	.row {
+		gap: 12px;
+	}
+	.card {
+		min-height: 96px;
+	}
+	.dot {
+		width: 44px;
+		height: 44px;
+	}
+}
+
+.hint {
+	margin-top: 12px;
+	text-align: center;
+	color: $muted;
+	font-size: 14px;
+}
