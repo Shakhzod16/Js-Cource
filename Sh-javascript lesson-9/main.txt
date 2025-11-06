@@ -1,0 +1,141 @@
+🧱 1. Object nima?
+
+Object — bu ma’lumotlarni juftlik (“kalit: qiymat”) ko‘rinishida saqlaydigan tuzilma.
+Ya’ni har bir obyekt ichida “nom” (key) va “qiymat” (value) mavjud:
+
+const person = {
+  name: "Shahzod",
+  age: 20,
+  job: "developer"
+};
+
+
+Bu yerda:
+
+name, age, job → kalitlar (keys)
+
+"Shahzod", 20, "developer" → qiymatlar (values)
+
+Har bir kalit-qiymat juftlik property (xususiyat) deyiladi.
+
+🧩 2. Object yaratish usullari
+🅰️ 1-usul: Literal usul (eng ko‘p ishlatiladi)
+const car = {
+  brand: "BMW",
+  color: "black"
+};
+
+🅱️ 2-usul: new Object()
+const car = new Object();
+car.brand = "BMW";
+car.color = "black";
+
+
+Ikkalasi bir xil natija beradi, lekin birinchi usul oddiy va tavsiya etiladi.
+
+🔍 3. Object ichidagi qiymatlarga murojaat qilish
+1️⃣ Nuqta orqali (.)
+console.log(person.name); // "Shahzod"
+
+2️⃣ Qavs orqali ([])
+console.log(person["age"]); // 20
+
+
+[] usuli foydali, agar kalit nomi o‘zgaruvchi yoki probel bo‘lsa:
+
+const data = { "user name": "Ali" };
+console.log(data["user name"]); // "Ali"
+
+✍️ 4. Yangi property qo‘shish yoki o‘zgartirish
+person.country = "Uzbekistan"; // yangi qo‘shish
+person.age = 21;               // mavjudini o‘zgartirish
+
+❌ 5. Property o‘chirish
+delete person.job;
+
+🔁 6. Object ichida function (method) ham bo‘lishi mumkin
+const user = {
+  name: "Shahzod",
+  age: 20,
+  greet: function() {
+    console.log("Salom, mening ismim " + this.name);
+  }
+};
+
+user.greet(); // Salom, mening ismim Shahzod
+
+
+this — obyektning o‘ziga ishora qiladi.
+
+📦 7. Object ichidagi obyekt (nested object)
+const student = {
+  name: "Nodira",
+  info: {
+    age: 19,
+    faculty: "IT"
+  }
+};
+
+console.log(student.info.age); // 19
+
+🔄 8. Object ichida massiv (array) saqlash
+const user = {
+  name: "Ali",
+  skills: ["HTML", "CSS", "JS"]
+};
+
+console.log(user.skills[2]); // "JS"
+
+🧮 9. Object’ni aylanib chiqish (loop)
+for...in sikli
+for (let key in person) {
+  console.log(key + ":", person[key]);
+}
+
+
+🧠 Natija:
+
+name: Shahzod
+age: 21
+job: developer
+
+🧰 10. Foydali Object metodlari
+Metod	Tavsif	Misol
+Object.keys(obj)	Kalitlarni massiv qaytaradi	["name", "age", "job"]
+Object.values(obj)	Qiymatlarni massiv qaytaradi	["Shahzod", 21, "developer"]
+Object.entries(obj)	Har bir juftlikni massiv ko‘rinishida qaytaradi	[["name", "Shahzod"], ["age", 21]]
+Object.assign()	Bir nechta obyektni birlashtiradi	Object.assign(target, source)
+Object.freeze()	Obyektni o‘zgarmas holga keltiradi	Object.freeze(person)
+Object.hasOwn(obj, key)	Kalit mavjudligini tekshiradi	Object.hasOwn(person, "name") → true
+🧠 11. Object’ni nusxalash (copy)
+❌ Oddiy tenglashtirish (=) — reference bo‘ladi
+const obj1 = { name: "Ali" };
+const obj2 = obj1;
+obj2.name = "Vali";
+
+console.log(obj1.name); // "Vali" (o‘zgardi!)
+
+✅ To‘g‘ri usullar:
+const obj2 = Object.assign({}, obj1);
+// yoki
+const obj2 = { ...obj1 }; // spread operator
+
+🔗 12. JSON va object farqi
+JSON	Object
+Faqat matn (string)	JavaScript obyekt
+Foydalanish uchun JSON.parse() bilan obyektga o‘giriladi	To‘g‘ridan-to‘g‘ri ishlatiladi
+const json = '{"name":"Ali","age":20}';
+const obj = JSON.parse(json);
+console.log(obj.name); // "Ali"
+
+🎯 13. Mini amaliy misol
+const car = {
+  brand: "Tesla",
+  model: "Model 3",
+  year: 2024,
+  start() {
+    console.log(this.brand + " yurmoqda 🚗");
+  }
+};
+
+car.start(); // Tesla yurmoqda 🚗
