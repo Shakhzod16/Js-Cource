@@ -1,0 +1,116 @@
+✅ JavaScript Array — To‘liq va sodda tushuncha
+📌 Array nima?
+
+Array (massiv) — bu bitta o‘zgaruvchi ichida bir nechta qiymat saqlash uchun ishlatiladigan tuzilma.
+
+let fruits = ["apple", "banana", "orange"];
+
+
+Bu yerda fruits — 3 ta elementdan iborat massiv.
+
+✅ Array ichida qanday ma’lumotlar bo‘ladi?
+
+Massiv ichida har xil turdagi ma’lumotlar bo‘lishi mumkin:
+
+let arr = [10, "salom", true, null, {name: "Ali"}, [1,2,3]];
+
+✅ Arraydagi elementlarga murojaat qilish
+
+Elementlarni index (tartib raqami) orqali olamiz. Index 0 dan boshlanadi.
+
+let colors = ["red", "green", "blue"];
+
+console.log(colors[0]); // red
+console.log(colors[2]); // blue
+
+✅ Array uzunligi — length
+console.log(colors.length); // 3
+
+✅ Eng ko‘p ishlatiladigan Array metodlari
+🔹 1. push() → massiv oxiriga qo‘shadi
+fruits.push("mango");
+
+🔹 2. pop() → oxirgi elementni o‘chiradi
+fruits.pop();
+
+🔹 3. unshift() → boshiga qo‘shadi
+fruits.unshift("grape");
+
+🔹 4. shift() → boshidan o‘chiradi
+fruits.shift();
+
+🔹 5. includes() → mavjudligini tekshiradi
+console.log(fruits.includes("banana")); // true
+
+🔹 6. indexOf() → indexini qaytaradi
+fruits.indexOf("banana"); // 1
+
+🔹 7. slice() → kesib oladi (asl massiv o‘zgarmaydi)
+let newArr = fruits.slice(1, 3);
+
+🔹 8. splice() → kesadi, o‘chiradi, qo‘shadi (asl massiv o‘zgaradi)
+fruits.splice(1, 1); // 1-indexdan 1 ta o‘chiradi
+
+🔹 9. join() → massivni satrga aylantiradi
+fruits.join(", "); // "apple, banana, orange"
+
+🔹 10. concat() → massivlarni birlashtiradi
+let result = arr1.concat(arr2);
+
+✅ **Massiv bo‘yicha Eng Muhim Pro Methodlar
+🔸 1. forEach() → elementlarni aylanish
+fruits.forEach(item => console.log(item));
+
+🔸 2. map() → yangi massiv qaytaradi
+let nums = [1,2,3];
+let doubled = nums.map(n => n * 2); // [2,4,6]
+
+🔸 3. filter() → shartga mos elementlarni qaytaradi
+let big = nums.filter(n => n > 1); // [2,3]
+
+🔸 4. find() → birinchi mos kelgan elementni qaytaradi
+nums.find(n => n === 2); // 2
+
+🔸 5. reduce() → barcha elementlarni bitta qiymatga keltiradi
+let sum = nums.reduce((a, b) => a + b, 0); // 6
+
+✅ Array yaratishning 2 usuli
+1-usul:
+let arr = [1, 2, 3];
+
+2-usul:
+let arr = new Array(1, 2, 3);
+
+✅ Array bilan loop ishlatish
+🔸 for
+for (let i = 0; i < fruits.length; i++) {
+  console.log(fruits[i]);
+}
+
+🔸 for…of
+for (let item of fruits) {
+  console.log(item);
+}
+
+✅ Array ichida array — nested array
+let nums = [[1,2], [3,4]];
+console.log(nums[1][0]); // 3
+
+✅ Praktika uchun tayyor misollar
+✅ 1. Massivdan eng katta sonni topish
+let arr = [10, 3, 28, 4];
+let max = Math.max(...arr);
+
+✅ 2. Faqat juft sonlarni chiqarish
+let even = arr.filter(n => n % 2 === 0);
+
+✅ 3. Element sonini sanash
+arr.length;
+
+✅ Xulosa
+
+JavaScript array — bu:
+✅ ko‘p qiymat saqlaydi
+✅ tartiblangan
+✅ juda qulay metodlarga ega
+✅ JSda eng ko‘p ishlatiladigan tuzilma
