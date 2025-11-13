@@ -1,0 +1,108 @@
+1. setTimeout
+
+Ma’nosi: setTimeout — bu JavaScript funksiyasi, u bir marta belgilangan vaqt (millisekundlarda) o‘tib, funksiyani ishga tushiradi.
+
+Sintaksis:
+
+setTimeout(function, delay, param1, param2, ...);
+
+
+function — vaqt o‘tganidan keyin ishga tushadigan funksiya.
+
+delay — kechikish vaqti millisekundlarda (1 sekund = 1000 ms).
+
+param1, param2... — funksiyaga beriladigan parametrlar (ixtiyoriy).
+
+Misol:
+
+console.log("Boshlanish");
+
+setTimeout(() => {
+  console.log("3 soniyadan keyin ishladi");
+}, 3000); // 3000 ms = 3 soniya
+
+console.log("Oxiri");
+
+
+Natija (3 soniyadan keyin):
+
+Boshlanish
+Oxiri
+3 soniyadan keyin ishladi
+
+
+Ko‘rishingiz mumkin, setTimeout faqat bir marta ishga tushadi va boshqa kodlar kutmaydi.
+
+2. setInterval
+
+Ma’nosi: setInterval — bu JavaScript funksiyasi, u ma’lum vaqt oralig‘ida takroriy ravishda funksiyani ishga tushiradi.
+
+Sintaksis:
+
+setInterval(function, interval, param1, param2, ...);
+
+
+function — ishga tushadigan funksiya.
+
+interval — har bir ishga tushirish orasidagi vaqt millisekundlarda.
+
+param1, param2... — funksiyaga beriladigan parametrlar (ixtiyoriy).
+
+Misol:
+
+let count = 0;
+
+let intervalId = setInterval(() => {
+  count++;
+  console.log("Bu kod har 2 soniyada ishlaydi:", count);
+
+  // Shart bilan to‘xtatish
+  if(count === 5){
+    clearInterval(intervalId); // intervalni to‘xtatish
+    console.log("Interval to‘xtadi");
+  }
+}, 2000);
+
+
+Natija:
+
+Bu kod har 2 soniyada ishlaydi: 1
+Bu kod har 2 soniyada ishlaydi: 2
+Bu kod har 2 soniyada ishlaydi: 3
+Bu kod har 2 soniyada ishlaydi: 4
+Bu kod har 2 soniyada ishlaydi: 5
+Interval to‘xtadi
+
+
+setInterval cheksiz ishlaydi to‘g‘ri to‘xtatish (clearInterval) qilinmaguncha.
+
+3. Farqlari
+Xususiyat	setTimeout	setInterval
+Qayta ishlash	Bir marta	Takroriy
+To‘xtatish	Avtomatik (bir marta ishga tushgach)	clearInterval() yordamida
+Vaqt o‘lchovi	Millisekund	Millisekund
+Kod bajarilishi	Bir martalik kechikish	Har interval oralig‘ida
+4. Qo‘shimcha maslahatlar
+
+setTimeout va setInterval asenkron ishlaydi, ya’ni ular kod oqimini to‘xtatmaydi.
+
+setIntervalni to‘xtatish uchun clearInterval(id), setTimeoutni to‘xtatish uchun clearTimeout(id) ishlatiladi.
+
+Agar interval juda qisqa bo‘lsa va funksiya ishlashi uzoq davom etsa, keyingi interval kutishi mumkin.
+
+Misol: clearTimeout va clearInterval
+
+let timer = setTimeout(() => {
+  console.log("Bu hech qachon ishlamaydi");
+}, 5000);
+
+clearTimeout(timer); // endi kod ishlamaydi
+
+let myInterval = setInterval(() => {
+  console.log("Ishlayapti");
+}, 1000);
+
+setTimeout(() => {
+  clearInterval(myInterval); // 5 soniyadan keyin to‘xtaydi
+  console.log("Interval to‘xtadi");
+}, 5000);
