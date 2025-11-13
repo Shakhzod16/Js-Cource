@@ -127,4 +127,15 @@
 
 // Homework
 
-
+// function draw() {
+// 	if (random === 1) card1.style.backgroundColor = 'blue';
+// 	else if (random === 2) card2.style.backgroundColor = 'blue';
+// 	else if (random === 3) card3.style.backgroundColor = 'blue';
+// 	else if (random === 4) card4.style.backgroundColor = 'blue';
+// 	else if (random === 5) card5.style.backgroundColor = 'blue';
+// 	else if (random === 6) card6.style.backgroundColor = 'blue';
+// 	else if (random === 7) card7.style.backgroundColor = 'blue';
+// 	else if (random === 8) card8.style.backgroundColor = 'blue';
+// 	else if (random === 9) card9.style.backgroundColor = 'blue';
+// 	else if (random === 10) card10.style.backgroundColor = 'blue';
+// }
