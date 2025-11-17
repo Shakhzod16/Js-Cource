@@ -1,33 +1,82 @@
-const nameInput = document.getElementById('name_inp');
-const yearInput = document.getElementById('year_inp');
-const colorInput = document.getElementById('color_inp');
-const saveBtn = document.getElementById('save-btn'); // ← to'g'rilandi
-const result = document.getElementById('result');
+// const nameInput = document.getElementById('name_inp');
+// const yearInput = document.getElementById('year_inp');
+// const colorInput = document.getElementById('color_inp');
+// const saveBtn = document.getElementById('save-btn');
+// const result = document.getElementById('result');
 
-let cars = [
-	{ name: 'Damas', year: 2030, color: 'success' },
-	{ name: 'Malibu', year: 2021, color: 'primary' },
-	{ name: 'cobalt', year: 2022, color: 'warning' },
+// let cars = [
+// 	{ name: 'Damas', year: 2030, color: 'success' },
+// 	{ name: 'Malibu', year: 2021, color: 'primary' },
+// 	{ name: 'cobalt', year: 2022, color: 'warning' },
+// ];
+
+// saveBtn.addEventListener('click', save);
+
+// function save() {
+// 	let carObj = {
+// 		name: nameInput.value,
+// 		year: +yearInput.value,
+// 		color: colorInput.value,
+// 	};
+// 	cars.push(carObj);
+// 	draw();
+// }
+
+// function draw() {
+// 	let res = '';
+// 	for (let i = 0; i < cars.length; i++) {
+// 		res += `<h1 class='border bg-${cars[i].color}'> ${cars[i].name} ${cars[i].year} ${cars[i].color}</h1>`;
+// 	}
+// 	result.innerHTML = res;
+// }
+
+// draw();
+
+// CRUD = Creat read update delete
+
+// =============================
+
+const text = document.getElementById('text');
+const nameInput = document.getElementById('name_inp');
+const ageInput = document.getElementById('age_inp');
+const emailInput = document.getElementById('email_inp');
+const btn = document.getElementById('btn');
+
+let users = [
+	{ name: 'Nozim', age: 12, email: 'nozim@mail.com' },
+	{ name: 'Alisher', age: 27, email: 'alisher@mail.com' },
+	{ name: 'Qurbon', age: 63, email: 'qurbon@mail.com' },
+	{ name: 'Bobomurod', age: 43, email: 'bobomurod@mail.com' },
 ];
 
-saveBtn.addEventListener('click', save);
+btn.addEventListener('click', saveTable);
 
-function save() {
-	let carObj = {
+function saveTable() {
+	let userObj = {
 		name: nameInput.value,
-		year: +yearInput.value,
-		color: colorInput.value,
+		age: +ageInput.value,
+		email: emailInput.value,
 	};
-	cars.push(carObj);
+	users.push(userObj);
+	clearForm();
 	draw();
 }
 
 function draw() {
-	let res = '';
-	for (let i = 0; i < cars.length; i++) {
-		res += `<h1 class='border bg-${cars[i].color}'> ${cars[i].name} ${cars[i].year} ${cars[i].color}</h1>`;
+	let result = '';
+	for (let i = 0; i < users.length; i++) {
+		result += `<tr>
+   <td>${users[i].name}</td>
+   <td>${users[i].age}</td>
+   <td>${users[i].email}</td>
+    </tr>`;
 	}
-	result.innerHTML = res;
+	text.innerHTML = result;
 }
-
 draw();
+
+function clearForm() {
+	nameInput.value = '';
+	ageInput.value = '';
+	emailInput.value = '';
+}
