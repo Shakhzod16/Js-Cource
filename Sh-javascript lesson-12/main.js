@@ -63,43 +63,43 @@
 // ======================  Homework  ======================
 // <!-- 1 - topshiriq -->
 
-const inp = document.getElementById('inp');
-const btn1 = document.getElementById('btn1');
-const result = document.getElementById('result');
-const yigindi = document.getElementById('yigindi');
-const kopaytma = document.getElementById('kopaytma');
-const totalNum = document.getElementById('totalNum');
+// const inp = document.getElementById('inp');
+// const btn1 = document.getElementById('btn1');
+// const result = document.getElementById('result');
+// const yigindi = document.getElementById('yigindi');
+// const kopaytma = document.getElementById('kopaytma');
+// const totalNum = document.getElementById('totalNum');
 
-btn1.addEventListener('click', saveNum);
-yigindi.addEventListener('click', plusNum);
-kopaytma.addEventListener('click', kopaytmaNum);
+// btn1.addEventListener('click', saveNum);
+// yigindi.addEventListener('click', plusNum);
+// kopaytma.addEventListener('click', kopaytmaNum);
 
-let arr = [];
+// let arr = [];
 
-function saveNum() {
-	let a = parseInt(inp.value);
-	if (arr.push(a)) {
-		inp.value = '';
-	}
+// function saveNum() {
+// 	let a = parseInt(inp.value);
+// 	if (arr.push(a)) {
+// 		inp.value = '';
+// 	}
 
-	result.innerText = arr;
-}
+// 	result.innerText = arr;
+// }
 
-function plusNum() {
-	let count = 0;
-	for (let i = 0; i < arr.length; i++) {
-		count += arr[i];
-	}
-	totalNum.textContent = count;
-}
+// function plusNum() {
+// 	let count = 0;
+// 	for (let i = 0; i < arr.length; i++) {
+// 		count += arr[i];
+// 	}
+// 	totalNum.textContent = count;
+// }
 
-function kopaytmaNum() {
-	let sum = 1;
-	for (let i = 0; i < arr.length; i++) {
-		sum *= arr[i];
-	}
-	totalNum.textContent = sum;
-}
+// function kopaytmaNum() {
+// 	let sum = 1;
+// 	for (let i = 0; i < arr.length; i++) {
+// 		sum *= arr[i];
+// 	}
+// 	totalNum.textContent = sum;
+// }
 
 // <!-- 2 - topshiriq -->
 
