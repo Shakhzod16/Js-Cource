@@ -83,32 +83,60 @@
 
 // Homework
 
-// const saveBtn = document.getElementById('save_btn');
-// const text = document.getElementById('text');
-// const nameInp = document.getElementById('name_inp');
-// const taskArea = document.getElementById('task');
+const saveBtn = document.getElementById('save_btn');
+const text = document.getElementById('text');
+const nameInp = document.getElementById('name_inp');
+const taskArea = document.getElementById('task');
 
-// saveBtn.addEventListener('click', save);
-// let tasks = [];
+saveBtn.addEventListener('click', save);
+let tasks = [];
+let soqchi = '';
 
-// function save() {
-// 	let taskObj = {
-// 		name: nameInp.value,
-// 		text: text.value,
-// 	};
-// 	tasks.push(taskObj);
-// 	draw();
-// }
+function save() {
+	let taskObj = {
+		name: nameInp.value,
+		text: text.value,
+	};
 
-// function draw() {
-// 	let res = '';
-// 	for (let i = 0; i < tasks.length; i++) {
-// 		res += `	<div class='card shadow-sm w-25'>
-// 				<div class='card-body'>
-// 					<h1>${tasks[i].name}</h1>
-// 					<p>${tasks[i].text}</p>
-// 				</div>
-// 			</div>`;
-// 	}
-// 	taskArea.innerHTML = res;
-// }
+	if (soqchi === '') {
+		tasks.push(taskObj);
+	} else {
+		tasks[soqchi] = taskObj;
+		soqchi = '';
+	}
+
+	draw();
+	clearForm();
+}
+
+function deleteTask(index) {
+	tasks.splice(index, 1);
+	draw();
+}
+function updateTask(index) {
+	let editingTask = tasks[index];
+	nameInp.value = editingTask.name;
+	text.value = editingTask.text;
+	soqchi = index;
+}
+
+function draw() {
+	let res = '';
+	for (let i = 0; i < tasks.length; i++) {
+		res += `	<div class='card shadow-sm w-25'>
+				<div class='card-body'>
+					<h1>${tasks[i].name}</h1>
+					<p>${tasks[i].text}</p>
+				</div>
+				<div class= "p-2 btn-group" >
+       <button onclick= 'deleteTask(${i})' class= 'btn btn-danger'>x</button>
+       <button onclick= 'updateTask(${i})' class= 'btn btn-warning'>edit</button>
+       </div>
+			</div>`;
+	}
+	taskArea.innerHTML = res;
+}
+function clearForm() {
+	nameInp.value = '';
+	text.value = '';
+}
