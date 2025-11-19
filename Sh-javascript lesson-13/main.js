@@ -36,47 +36,79 @@
 
 // =============================
 
-const text = document.getElementById('text');
-const nameInput = document.getElementById('name_inp');
-const ageInput = document.getElementById('age_inp');
-const emailInput = document.getElementById('email_inp');
-const btn = document.getElementById('btn');
+// const text = document.getElementById('text');
+// const nameInput = document.getElementById('name_inp');
+// const ageInput = document.getElementById('age_inp');
+// const emailInput = document.getElementById('email_inp');
+// const btn = document.getElementById('btn');
 
-let users = [
-	{ name: 'Nozim', age: 12, email: 'nozim@mail.com' },
-	{ name: 'Alisher', age: 27, email: 'alisher@mail.com' },
-	{ name: 'Qurbon', age: 63, email: 'qurbon@mail.com' },
-	{ name: 'Bobomurod', age: 43, email: 'bobomurod@mail.com' },
-];
+// let users = [
+// 	{ name: 'Nozim', age: 12, email: 'nozim@mail.com' },
+// 	{ name: 'Alisher', age: 27, email: 'alisher@mail.com' },
+// 	{ name: 'Qurbon', age: 63, email: 'qurbon@mail.com' },
+// 	{ name: 'Bobomurod', age: 43, email: 'bobomurod@mail.com' },
+// ];
 
-btn.addEventListener('click', saveTable);
+// btn.addEventListener('click', saveTable);
 
-function saveTable() {
-	let userObj = {
-		name: nameInput.value,
-		age: +ageInput.value,
-		email: emailInput.value,
-	};
-	users.push(userObj);
-	clearForm();
-	draw();
-}
+// function saveTable() {
+// 	let userObj = {
+// 		name: nameInput.value,
+// 		age: +ageInput.value,
+// 		email: emailInput.value,
+// 	};
+// 	users.push(userObj);
+// 	clearForm();
+// 	draw();
+// }
 
-function draw() {
-	let result = '';
-	for (let i = 0; i < users.length; i++) {
-		result += `<tr>
-   <td>${users[i].name}</td>
-   <td>${users[i].age}</td>
-   <td>${users[i].email}</td>
-    </tr>`;
-	}
-	text.innerHTML = result;
-}
-draw();
+// function draw() {
+// 	let result = '';
+// 	for (let i = 0; i < users.length; i++) {
+// 		result += `<tr>
+//    <td>${users[i].name}</td>
+//    <td>${users[i].age}</td>
+//    <td>${users[i].email}</td>
+//     </tr>`;
+// 	}
+// 	text.innerHTML = result;
+// }
+// draw();
 
-function clearForm() {
-	nameInput.value = '';
-	ageInput.value = '';
-	emailInput.value = '';
-}
+// function clearForm() {
+// 	nameInput.value = '';
+// 	ageInput.value = '';
+// 	emailInput.value = '';
+// }
+
+// Homework
+
+// const saveBtn = document.getElementById('save_btn');
+// const text = document.getElementById('text');
+// const nameInp = document.getElementById('name_inp');
+// const taskArea = document.getElementById('task');
+
+// saveBtn.addEventListener('click', save);
+// let tasks = [];
+
+// function save() {
+// 	let taskObj = {
+// 		name: nameInp.value,
+// 		text: text.value,
+// 	};
+// 	tasks.push(taskObj);
+// 	draw();
+// }
+
+// function draw() {
+// 	let res = '';
+// 	for (let i = 0; i < tasks.length; i++) {
+// 		res += `	<div class='card shadow-sm w-25'>
+// 				<div class='card-body'>
+// 					<h1>${tasks[i].name}</h1>
+// 					<p>${tasks[i].text}</p>
+// 				</div>
+// 			</div>`;
+// 	}
+// 	taskArea.innerHTML = res;
+// }
