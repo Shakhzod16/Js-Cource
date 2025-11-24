@@ -12,7 +12,7 @@
 			crossorigin="anonymous" />
 	</head>
 	<body class="py-2 container">
-		<div class="card w-25 mx-auto">
+		<!-- <div class="card w-25 mx-auto">
 			<div class="card-header bg-dark text-white text-center">Add User</div>
 			<div class="card-body">
 				<input id="name_inp" type="text" placeholder="name..." class="form-control" />
@@ -39,6 +39,42 @@
 					<th>Age</th>
 					<th>Country</th>
 					<th>Region</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+
+			<tbody id="tbody"></tbody>
+		</table> -->
+
+		<!-- ================  Homework ================ -->
+
+		<div class="card w-25 mx-auto">
+			<div class="card-header bg-primary text-white text-center">Add User</div>
+			<div class="card-body">
+				<input id="name_inp" type="text" placeholder="name..." class="form-control" />
+
+				<input id="model_inp" type="text" placeholder="model..." class="form-control mt-2" />
+
+				<input id="color_inp" type="text" placeholder="color..." class="form-control mt-2" />
+
+				<input id="price_inp" type="number" placeholder="price..." class="form-control mt-2" />
+			</div>
+			<div class="card-footer">
+				<button id="add_btn" class="btn btn-primary w-100">Add car</button>
+			</div>
+		</div>
+		<div class="d-flex align-content-center gap-3">
+			<input id="search_inp" type="search" class="form-control w-25" />
+			<button id="search_btn" class="btn btn-secondary">Search</button>
+		</div>
+
+		<table class="mt-2 table">
+			<thead class="table-primary">
+				<tr>
+					<th>Producer</th>
+					<th>Model</th>
+					<th>Color</th>
+					<th>Price</th>
 					<th>Action</th>
 				</tr>
 			</thead>
