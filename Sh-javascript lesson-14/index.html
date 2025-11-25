@@ -48,7 +48,7 @@
 
 		<!-- ================  Homework ================ -->
 
-		<div class="card w-25 mx-auto">
+		<!-- <div class="card w-25 mx-auto">
 			<div class="card-header bg-primary text-white text-center">Add User</div>
 			<div class="card-body">
 				<input id="name_inp" type="text" placeholder="name..." class="form-control" />
@@ -80,8 +80,80 @@
 			</thead>
 
 			<tbody id="tbody"></tbody>
-		</table>
+		</table> -->
 
+
+		<div class="border w-50 mx-auto shadow-sm p-4 d-flex gap-3">
+			<!-- left form -->
+			<div>
+				<input type="text" placeholder="firstname..." class="form-control" id="firstname_inp" />
+
+				<input type="text" placeholder="lastname..." class="form-control mt-2" id="lastname_inp" />
+
+				<input type="number" placeholder="age..." class="form-control mt-2" id="age_inp" />
+
+				<select id="gender_inp" class="form-select mt-2">
+					<option value="" disabled selected>Selected gender</option>
+					<option value="">Male</option>
+					<option value="">Female</option>
+				</select>
+			</div>
+			<!-- center form -->
+			<div class="border p-2 rounded-2">
+				<label for="student_inp">
+					Student
+					<input id="student_inp" class="form-check-input" type="radio" name="type_inp" />
+				</label>
+				<br />
+				<label for="child_inp">
+					Child
+					<input id="child_inp" class="form-check-input" type="radio" name="type_inp" />
+				</label>
+				<div class="mt-2 border p-2 rounded-2">
+					<label for="english_inp">
+						<input id="english_inp" type="checkbox" class="form-check-input" />
+						English
+					</label>
+					<br />
+					<label for="russion_inp">
+						<input id="russion_inp" type="checkbox" class="form-check-input" />
+						Russion
+					</label>
+					<br />
+					<label for="uzbek_inp">
+						<input id="uzbek_inp" type="checkbox" class="form-check-input" />
+						Uzbek
+					</label>
+				</div>
+			</div>
+			<!-- right form -->
+			<div>
+				<label for="color_inp">
+					Select color:
+					<input id="color_inp" type="color" />
+				</label>
+				<br />
+				<textarea rows="3" placeholder="description..." class="form-control mt-2 " id="description_inp"></textarea>
+				<button id="save_btn" class="btn btn-dark mt-2 w-100">Save</button>
+			</div>
+		</div>
+		<table class="table mt-2">
+			<thead class="table-dark">
+				<tr>
+					<th>N</th>
+					<th>Firstname</th>
+					<th>LastName</th>
+					<th>Age</th>
+					<th>Gender</th>
+					<th>User Name</th>
+					<th>Languages</th>
+					<th>Color</th>
+					<th>description</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody id="tbody"></tbody>
+		</table>
 		<script src="main.js"></script>
 	</body>
 </html>

@@ -73,78 +73,111 @@
 
 // <!-- ================  Homework ================ -->
 
-const addBtn = document.getElementById('add_btn');
-const nameInp = document.getElementById('name_inp');
-const modelInp = document.getElementById('model_inp');
+// const addBtn = document.getElementById('add_btn');
+// const nameInp = document.getElementById('name_inp');
+// const modelInp = document.getElementById('model_inp');
+// const colorInp = document.getElementById('color_inp');
+// const priceInp = document.getElementById('price_inp');
+// const tbody = document.getElementById('tbody');
+// const searchInp = document.getElementById('search_inp');
+// const searchbtn = document.getElementById('search_btn');
+
+// addBtn.addEventListener('click', addCar);
+// searchbtn.addEventListener('click', handleSearch);
+// let users = [];
+// let soqchi = '';
+
+// function addCar() {
+// 	let userObj = {
+// 		name: nameInp.value,
+// 		model: modelInp.value,
+// 		color: colorInp.value,
+// 		price: +priceInp.value,
+// 	};
+// 	if (soqchi === '') {
+// 		if (nameInp.value == "" && modelInp.value == "" && colorInp.value == "" && priceInp.value == "") {
+// 			return;
+// 		}
+// 		users.push(userObj);
+// 	} else {
+// 		users[soqchi] = userObj;
+// 		soqchi = '';
+// 	}
+// 	clearForm();
+// 	draw(users);
+// }
+// function deleteUser(index) {
+// 	users.splice(index, 1);
+// 	draw(users);
+// }
+// function updateUser(index) {
+// 	let editUser = users[index];
+// 	nameInp.value = editUser.name;
+// 	modelInp.value = editUser.model;
+// 	colorInp.value = editUser.color;
+// 	priceInp.value = editUser.price;
+// 	soqchi = index;
+// }
+
+// function handleSearch() {
+// 	let search = searchInp.value.toUpperCase();
+// 	let filter = users.filter(item => item.name.toUpperCase().includes(search));
+// 	draw(filter);
+// }
+
+// function draw(array) {
+// 	let res = '';
+// 	for (let i = 0; i < array.length; i++) {
+// 		res += `
+//   <tr>
+//   <td>${array[i].name}</td>
+//   <td>${array[i].model}</td>
+//   <td>${array[i].color}</td>
+//   <td>${array[i].price}</td>
+//   <td>
+//     <button onclick= "deleteUser(${i})" class="btn btn-danger">🗑️</button>
+//     <button onclick="updateUser(${i})" class="btn btn-warning" >✏️</button>
+//     </td>
+//   </tr>
+
+//     `;
+// 	}
+// 	tbody.innerHTML = res;
+// }
+
+// function clearForm() {
+// 	nameInp.value = '';
+// 	modelInp.value = '';
+// 	colorInp.value = '';
+// 	priceInp.value = '';
+// }
+
+// <!-- Homework - Task -->
+
+const studentInp = document.getElementById('student_inp');
+const childInp = document.getElementById('child_inp');
+
+const englishInp = document.getElementById('english_inp');
+const russionInp = document.getElementById('russion_inp');
+const uzbekInp = document.getElementById('uzbek_inp');
+
 const colorInp = document.getElementById('color_inp');
-const priceInp = document.getElementById('price_inp');
-const tbody = document.getElementById('tbody');
-const searchInp = document.getElementById('search_inp');
-const searchbtn = document.getElementById('search_btn');
+const descriptionInp = document.getElementById('description_inp');
 
-addBtn.addEventListener('click', addCar);
-searchbtn.addEventListener('click', handleSearch);
-let users = [];
-let soqchi = '';
+const saveBtn = document.getElementById('save_btn');
 
-function addCar() {
+saveBtn.addEventListener('click', save);
+let users = []
+
+
+function save() {
+	let userType;
+	if (studentInp.checked) {
+		userType = 'Student';
+	} else if (childInp.checked) {
+		userType = 'child';
+	}
 	let userObj = {
-		name: nameInp.value,
-		model: modelInp.value,
-		color: colorInp.value,
-		price: +priceInp.value,
-	};
-	if (soqchi === '') {
-		users.push(userObj);
-	} else {
-		users[soqchi] = userObj;
-		soqchi = '';
+		firstName: firstName
 	}
-	clearForm();
-	draw(users);
-}
-function deleteUser(index) {
-	users.splice(index, 1);
-	draw(users);
-}
-function updateUser(index) {
-	let editUser = users[index];
-	nameInp.value = editUser.name;
-	modelInp.value = editUser.model;
-	colorInp.value = editUser.color;
-	priceInp.value = editUser.price;
-	soqchi = index;
-}
-
-function handleSearch() {
-	let search = searchInp.value.toUpperCase();
-	let filter = users.filter(item => item.name.toUpperCase().includes(search));
-	draw(filter);
-}
-
-function draw(array) {
-	let res = '';
-	for (let i = 0; i < array.length; i++) {
-		res += `
-  <tr>
-  <td>${array[i].name}</td>
-  <td>${array[i].model}</td>
-  <td>${array[i].color}</td>
-  <td>${array[i].price}</td>
-  <td>
-    <button onclick= "deleteUser(${i})" class="btn btn-danger">🗑️</button>
-    <button onclick="updateUser(${i})" class="btn btn-warning" >✏️</button>
-    </td>
-  </tr>
-
-    `;
-	}
-	tbody.innerHTML = res;
-}
-
-function clearForm() {
-	nameInp.value = '';
-	modelInp.value = '';
-	colorInp.value = '';
-	priceInp.value = '';
 }
