@@ -163,21 +163,142 @@ const uzbekInp = document.getElementById('uzbek_inp');
 
 const colorInp = document.getElementById('color_inp');
 const descriptionInp = document.getElementById('description_inp');
+const tbody = document.getElementById('tbody');
 
 const saveBtn = document.getElementById('save_btn');
 
-saveBtn.addEventListener('click', save);
-let users = []
+const firstName = document.getElementById('firstname_inp');
+const lastName = document.getElementById('lastname_inp');
+const ageInp = document.getElementById('age_inp');
+const genderInp = document.getElementById('gender_inp');
 
+const searchInp = document.getElementById('search_inp');
+const searchBtn = document.getElementById('search_btn');
+
+saveBtn.addEventListener('click', save);
+searchBtn.addEventListener('click', handleSearch);
+
+let users = [];
+let soqchi = '';
 
 function save() {
 	let userType;
+	let userLanguages = [];
+
 	if (studentInp.checked) {
 		userType = 'Student';
 	} else if (childInp.checked) {
-		userType = 'child';
+		userType = 'Child';
 	}
+
+	if (englishInp.checked) {
+		userLanguages.push('English');
+	}
+	if (russionInp.checked) {
+		userLanguages.push('Russian');
+	}
+	if (uzbekInp.checked) {
+		userLanguages.push('Uzbek');
+	}
+
 	let userObj = {
-		firstName: firstName
+		firstName: firstName.value,
+		lastName: lastName.value,
+		age: +ageInp.value,
+		gender: genderInp.value,
+		userType,
+		languages: userLanguages,
+		color: colorInp.value,
+		description: descriptionInp.value,
+	};
+
+	if (soqchi === '') {
+		users.push(userObj);
+	} else {
+		users[soqchi] = userObj;
+		soqchi = '';
 	}
+
+	draw(users);
+	formClear();
+}
+
+function deleteUser(index) {
+	users.splice(index, 1);
+	draw(users);
+}
+
+function updateUser(index) {
+	soqchi = index;
+	let currenUser = users[index];
+
+	firstName.value = currenUser.firstName;
+	lastName.value = currenUser.lastName;
+	ageInp.value = currenUser.age;
+	genderInp.value = currenUser.gender;
+
+	if (currenUser.userType === 'Student') {
+		studentInp.checked = true;
+	} else if (currenUser.userType === 'Child') {
+		childInp.checked = true;
+	}
+
+	englishInp.checked = currenUser.languages.includes('English');
+	russionInp.checked = currenUser.languages.includes('Russian');
+	uzbekInp.checked = currenUser.languages.includes('Uzbek');
+
+	colorInp.value = currenUser.color;
+	descriptionInp.value = currenUser.description;
+}
+
+function handleSearch() {
+	let text = searchInp.value.toLowerCase();
+	let filter = users.filter(
+		user => user.firstName.toLowerCase().includes(text) || user.lastName.toLowerCase().includes(text),
+	);
+
+	draw(filter);
+}
+
+function draw(arr) {
+	let res = '';
+	for (let i = 0; i < arr.length; i++) {
+		res += `<tr>
+			<td>${i + 1}</td>
+			<td>${arr[i].firstName}</td>
+			<td>${arr[i].lastName}</td>
+			<td>${arr[i].age}</td>
+			<td>${arr[i].gender}</td>
+			<td>${arr[i].userType}</td>
+			<td>${arr[i].languages.join(', ')}</td>
+
+			<td>
+				<div style="background-color:${arr[i].color}; width:25px; height:25px"></div>
+			</td>
+
+			<td>${arr[i].description}</td>
+			<td>
+				<button onclick="deleteUser(${i})" class="btn btn-danger">🗑️</button>
+				<button onclick="updateUser(${i})" class="btn btn-warning">✏️</button>
+			</td>
+		</tr>`;
+	}
+	tbody.innerHTML = res;
+}
+
+function formClear() {
+	firstName.value = '';
+	lastName.value = '';
+	ageInp.value = '';
+	genderInp.value = '';
+
+	studentInp.checked = false;
+	childInp.checked = false;
+
+	englishInp.checked = false;
+	uzbekInp.checked = false;
+	russionInp.checked = false;
+
+	colorInp.value = '';
+	descriptionInp.value = '';
 }
