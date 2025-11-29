@@ -11,9 +11,28 @@
 			integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
 			crossorigin="anonymous" />
 	</head>
-	<body>
-
-
+	<body class="py-1 container">
+		<div class="card w-25 mx-auto">
+			<div class="card-header bg-dark text-white text-center">Add User</div>
+			<div class="card-body">
+				<input id="name_inp" type="text" class="form-control" placeholder="Name..." />
+				<input id="age_inp" type="number" class="form-control mt-3" placeholder="Age..." />
+			</div>
+			<div class="card-footer">
+				<button id="save_btn" class="btn btn-dark w-100">Save</button>
+			</div>
+		</div>
+		<table class="table mt-5">
+			<thead class="table-dark">
+				<tr>
+					<th>N</th>
+					<th>Name</th>
+					<th>Age</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+      <tbody id="tbody"></tbody>
+		</table>
 		<script src="main.js"></script>
 	</body>
 </html>
