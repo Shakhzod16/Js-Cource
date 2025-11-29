@@ -1,24 +1,12 @@
-.product,
-.cart-item {
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 10px;
-  margin: 10px;
-  min-width: 250px;
-  min-height: 200px;
-  position: relative;
-}
-
-.btn-group {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-}
-
-#productForm {
-  display: none;
-  border: 1px solid #ddd;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 10px;
+.doira {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: blue;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  font-size: 20px;
 }/*# sourceMappingURL=stayle.css.map */

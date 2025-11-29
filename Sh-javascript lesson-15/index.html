@@ -20,7 +20,7 @@
 				<select id="status_inp" class="form-select mt-3">
 					<option value="" disabled selected>Select status</option>
 					<option value="OPEN">Open</option>
-					<option  value="PROGRESS">Progress</option>
+					<option value="PROGRESS">Progress</option>
 					<option value="COMPLETED">Completed</option>
 				</select>
 			</div>
@@ -28,8 +28,8 @@
 				<button id="save_btn" class="btn btn-dark w-100">Save</button>
 			</div>
 		</div>
-		<! ==================== -->
-		<!-- <div class="mt-3 d-flex justify-content-around">
+
+		<div class="mt-3 d-flex justify-content-around">
 			<div class="border p-3 rounded-3 my-box">
 				<h1 class="text-center">Open</h1>
 				<div id="open_cards"></div>
@@ -42,10 +42,10 @@
 				<h1 class="text-center">Completed</h1>
 				<div id="completed_cards"></div>
 			</div>
-		</div>  -->
+		</div> -->
 
 		<!-- Homework -->
-		<div class="card w-25 mx-auto">
+		<!-- <div class="card w-25 mx-auto">
 			<button id="showBtn" class="btn btn-primary mb-3">Show</button>
 
 			<div id="productForm">
@@ -63,8 +63,26 @@
 		<div id="products" class="d-flex flex-wrap"></div>
 
 		<h3>Cart</h3>
-		<div id="cart" class="d-flex flex-wrap"></div>
+		<div id="cart" class="d-flex flex-wrap"></div> -->
 
+		<!-- ================================ Leson ============================== -->
+		<!--
+		<select onchange="handleChange(event)" class="w-25 form-select">
+			<option value="" disabled selected>Selected place</option>
+			<option value="Buxara">Buxara</option>
+			<option value="ANDIJON">Andijon</option>
+			<option value="TOSHEKENT">Toshkent</option>
+			<option value="NAVOIY">Navoiy</option>
+			<option value="URGANCH">Urganch</option>
+		</select>
+		<input type="text" id="title_inp" placeholder="Shaharni yozing" />
+		<h1 id="result" class="mt-5"></h1> -->
+
+		<!-- ============================= -->
+
+		<input type="text" class="form-control w-25" onkeyup="test(event)" placeholder="Matn Kiritng..." />
+		<h1 id="title"></h1>
+		
 		<script src="main.js"></script>
 	</body>
 </html>

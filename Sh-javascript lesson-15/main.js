@@ -94,139 +94,200 @@
 
 // Homework
 
-const showBtn = document.getElementById('showBtn');
-const productForm = document.getElementById('productForm');
+// const showBtn = document.getElementById('showBtn');
+// const productForm = document.getElementById('productForm');
 
-const saveBtn = document.getElementById('saveBtn');
-const cancelBtn = document.getElementById('cancelBtn');
-const cartBtn = document.getElementById('cartBtn');
+// const saveBtn = document.getElementById('saveBtn');
+// const cancelBtn = document.getElementById('cancelBtn');
+// const cartBtn = document.getElementById('cartBtn');
 
-const titleInp = document.getElementById('title');
-const descInp = document.getElementById('description');
+// const titleInp = document.getElementById('title');
+// const descInp = document.getElementById('description');
 
-const productsDiv = document.getElementById('products');
-const cartDiv = document.getElementById('cart');
+// const productsDiv = document.getElementById('products');
+// const cartDiv = document.getElementById('cart');
 
-let products = [];
-let cartItems = [];
-let editIndex = null;
+// let products = [];
+// let cartItems = [];
+// let editIndex = null;
 
-showBtn.onclick = function () {
-	productForm.style.display = 'block';
-};
+// showBtn.onclick = function () {
+// 	productForm.style.display = 'block';
+// };
 
-cancelBtn.onclick = function () {
-	clearTempAddedItems();
-	drawProducts();
-	drawCart();
-	clearForm();
-	productForm.style.display = 'none';
-	editIndex = null;
-};
+// cancelBtn.onclick = function () {
+// 	clearTempAddedItems();
+// 	drawProducts();
+// 	drawCart();
+// 	clearForm();
+// 	productForm.style.display = 'none';
+// 	editIndex = null;
+// };
 
-let temp = [];
+// let temp = [];
 
-function clearTempAddedItems() {
-	for (let i = 0; i < temp.length; i++) {
-		if (temp[i].type === 'product') {
-			products.splice(temp[i].index, 1);
-		} else {
-			cartItems.splice(temp[i].index, 1);
-		}
-	}
-	temp = [];
+// function clearTempAddedItems() {
+// 	for (let i = 0; i < temp.length; i++) {
+// 		if (temp[i].type === 'product') {
+// 			products.splice(temp[i].index, 1);
+// 		} else {
+// 			cartItems.splice(temp[i].index, 1);
+// 		}
+// 	}
+// 	temp = [];
+// }
+
+// saveBtn.onclick = function () {
+// 	let title = titleInp.value;
+// 	let desc = descInp.value;
+
+// 	if (title === '') {
+// 		alert('Title kerak!');
+// 		return;
+// 	}
+
+// 	let obj = { title: title, description: desc };
+
+// 	if (editIndex === null) {
+// 		products.push(obj);
+// 		temp.push({ type: 'product', index: products.length - 1 });
+// 	} else {
+// 		products[editIndex] = obj;
+// 		editIndex = null;
+// 	}
+
+// 	drawProducts();
+// 	clearForm();
+// };
+
+// cartBtn.onclick = function () {
+// 	let title = titleInp.value;
+// 	let desc = descInp.value;
+
+// 	if (title === '') {
+// 		alert('Title kerak!');
+// 		return;
+// 	}
+
+// 	let obj = { title: title, description: desc };
+
+// 	cartItems.push(obj);
+// 	temp.push({ type: 'cart', index: cartItems.length - 1 });
+
+// 	drawCart();
+// 	clearForm();
+// };
+
+// function drawProducts() {
+// 	productsDiv.innerHTML = '';
+
+// 	for (let i = 0; i < products.length; i++) {
+// 		let card = document.createElement('div');
+// 		card.className = 'product';
+
+// 		card.innerHTML =
+// 			'<h5>' +
+// 			products[i].title +
+// 			'</h5>' +
+// 			'<p>' +
+// 			products[i].description +
+// 			'</p>' +
+// 			'<div class="btn-group">' +
+// 			'<button class="btn btn-warning btn-sm editBtn">Edit</button>' +
+// 			'<button class="btn btn-danger btn-sm deleteBtn">Delete</button>' +
+// 			'</div>';
+
+// 		card.getElementsByClassName('deleteBtn')[0].onclick = function () {
+// 			products.splice(i, 1);
+// 			drawProducts();
+// 		};
+
+// 		card.getElementsByClassName('editBtn')[0].onclick = function () {
+// 			editIndex = i;
+// 			titleInp.value = products[i].title;
+// 			descInp.value = products[i].description;
+// 			productForm.style.display = 'block';
+// 		};
+
+// 		productsDiv.appendChild(card);
+// 	}
+// }
+
+// function drawCart() {
+// 	cartDiv.innerHTML = '';
+
+// 	for (let i = 0; i < cartItems.length; i++) {
+// 		let card = document.createElement('div');
+// 		card.className = 'cart-item';
+
+// 		card.innerHTML = '<h5>' + cartItems[i].title + '</h5>' + '<p>' + cartItems[i].description + '</p>';
+
+// 		cartDiv.appendChild(card);
+// 	}
+// }
+
+// function clearForm() {
+// 	titleInp.value = '';
+// 	descInp.value = '';
+// }
+
+// <!-- ================================ Leson ============================== -->
+
+// const titleInp = document.getElementById('title_inp');
+// const result = document.getElementById('result');
+
+// titleInp.addEventListener('input', handleChange);
+
+// function handleChange(e) {
+// 	result.innerText = `Siz ${e.target.value} yashaysiz`;
+// }
+
+// =============================
+
+// const title = document.getElementById('title');
+
+// function test(e) {
+// 	let res = +e.target.value;
+// 	draw(res);
+// }
+// function draw(son) {
+// 	let s = '';
+// 	for (let i = 1; i <= son; i++) {
+// 		s += `<p>${i}</p>`;
+// 	}
+// 	title.innerHTML = s;
+// }
+
+// ====================
+
+// const title = document.getElementById('title');
+
+// function test(e) {
+// 	let res = +e.target.value;
+// 	draw(res);
+// }
+
+// function draw(son) {
+// 	let s = '';
+// 	for (let i = 1; i <= son; i++) {
+// 		s += `<div class="doira">${i}</div>`;
+// 	}
+// 	title.innerHTML = s;
+// }
+
+// ===========================
+
+const title = document.getElementById('title');
+
+function test(e) {
+	let input = +e.target.value;
+	draw(input);
 }
 
-saveBtn.onclick = function () {
-	let title = titleInp.value;
-	let desc = descInp.value;
-
-	if (title === '') {
-		alert('Title kerak!');
-		return;
+function draw(son) {
+	let s = '';
+	for (let i = 1; i <= son; i++) {
+		s += `<div class="doira ${i % 2 == 0 ? 'bg-success' : 'bg-danger'}">${i}</div>`;
 	}
-
-	let obj = { title: title, description: desc };
-
-	if (editIndex === null) {
-		products.push(obj);
-		temp.push({ type: 'product', index: products.length - 1 });
-	} else {
-		products[editIndex] = obj;
-		editIndex = null;
-	}
-
-	drawProducts();
-	clearForm();
-};
-
-cartBtn.onclick = function () {
-	let title = titleInp.value;
-	let desc = descInp.value;
-
-	if (title === '') {
-		alert('Title kerak!');
-		return;
-	}
-
-	let obj = { title: title, description: desc };
-
-	cartItems.push(obj);
-	temp.push({ type: 'cart', index: cartItems.length - 1 });
-
-	drawCart();
-	clearForm();
-};
-
-function drawProducts() {
-	productsDiv.innerHTML = '';
-
-	for (let i = 0; i < products.length; i++) {
-		let card = document.createElement('div');
-		card.className = 'product';
-
-		card.innerHTML =
-			'<h5>' +
-			products[i].title +
-			'</h5>' +
-			'<p>' +
-			products[i].description +
-			'</p>' +
-			'<div class="btn-group">' +
-			'<button class="btn btn-warning btn-sm editBtn">Edit</button>' +
-			'<button class="btn btn-danger btn-sm deleteBtn">Delete</button>' +
-			'</div>';
-
-		card.getElementsByClassName('deleteBtn')[0].onclick = function () {
-			products.splice(i, 1);
-			drawProducts();
-		};
-
-		card.getElementsByClassName('editBtn')[0].onclick = function () {
-			editIndex = i;
-			titleInp.value = products[i].title;
-			descInp.value = products[i].description;
-			productForm.style.display = 'block';
-		};
-
-		productsDiv.appendChild(card);
-	}
-}
-
-function drawCart() {
-	cartDiv.innerHTML = '';
-
-	for (let i = 0; i < cartItems.length; i++) {
-		let card = document.createElement('div');
-		card.className = 'cart-item';
-
-		card.innerHTML = '<h5>' + cartItems[i].title + '</h5>' + '<p>' + cartItems[i].description + '</p>';
-
-		cartDiv.appendChild(card);
-	}
-}
-
-function clearForm() {
-	titleInp.value = '';
-	descInp.value = '';
+	title.innerHTML = s;
 }

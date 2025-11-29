@@ -1,0 +1,119 @@
+🧠 Local Storage nima o‘zi?
+
+localStorage — bu brauzer ichidagi mini-xotira.
+Unda ma’lumotlar foydalanuvchi brauzerini yopganida ham o‘chmaydi.
+
+➡️ Faqat:
+
+faqat string (matn) saqlaydi
+
+maksimal 5–10 MB atrofida joy bor
+
+har bitta website uchun alohida xotira
+
+serverga yuborilmaydi
+
+📌 localStorage ning asosiy metodlari
+Metod	Vazifa
+localStorage.setItem(key, value)	Ma’lumot yozadi
+localStorage.getItem(key)	Ma’lumotni o‘qiydi
+localStorage.removeItem(key)	Bitta elementni o‘chiradi
+localStorage.clear()	Hammasini tozalaydi
+localStorage.key(index)	Index bo‘yicha key beradi
+localStorage.length	Ichidagi elementlar soni
+🔥 1. Ma’lumot yozish
+localStorage.setItem("name", "Shahzod");
+localStorage.setItem("age", "22");
+
+🔥 2. Ma’lumotni o‘qish
+let n = localStorage.getItem("name");
+console.log(n); // "Shahzod"
+
+🔥 3. Ma’lumotni o‘chirish
+localStorage.removeItem("age");
+
+🔥 4. Hammasini tozalash
+localStorage.clear();
+
+🧩 🟡 MUHIM — localStorage Faqat STRING saqlaydi
+
+Demak, agar siz array yoki object saqlamoqchi bo‘lsangiz, uni JSON formatga o‘girasiz.
+
+📦 Array saqlash
+let arr = ["apple", "banana", "orange"];
+
+localStorage.setItem("fruits", JSON.stringify(arr));
+
+
+O'qish:
+
+let fruits = JSON.parse(localStorage.getItem("fruits"));
+console.log(fruits); // ["apple", "banana", "orange"]
+
+📦 Object saqlash
+let user = {
+  name: "Nodira",
+  age: 21,
+  job: "SMM"
+};
+
+localStorage.setItem("user", JSON.stringify(user));
+
+
+O‘qish:
+
+let data = JSON.parse(localStorage.getItem("user"));
+console.log(data.name); // Nodira
+
+🧨 Agar JSON.parse xatolik bersa?
+
+Chunki ba'zan localStorage ichida buzilgan matn bo‘ladi.
+
+Shu usul bilan tekshirib ol:
+
+let raw = localStorage.getItem("user");
+
+try {
+  const data = JSON.parse(raw);
+  console.log(data);
+} catch (e) {
+  console.log("Xato JSON:", e);
+}
+
+🎯 LocalStorage qayerda ishlatiladi? (real misollar)
+✔ Login bo‘limida token saqlash
+✔ Shopping cart (savatcha) ma’lumotlarini saqlash
+✔ Tema o‘zgartirish – dark / light
+✔ Formadan kiritilgan ma’lumotlarni saqlab qo‘yish
+✔ Foydalanuvchini qaytadan xotirlatish (onboarding)
+🧪 REAL PROJECT MISOL (TODO LIST)
+Saqlash:
+function saveTodos(todos) {
+  localStorage.setItem("todos", JSON.stringify(todos));
+}
+
+O‘qish:
+function loadTodos() {
+  return JSON.parse(localStorage.getItem("todos")) || [];
+}
+
+Ishlatish:
+let todos = loadTodos();
+
+todos.push("Uy vazifa bajarish");
+
+saveTodos(todos);
+
+⚡ Bonus: Data mavjud yoki yo‘qligini tekshirish
+if (localStorage.getItem("user")) {
+  console.log("User mavjud");
+} else {
+  console.log("User topilmadi");
+}
+
+✨ Xulosa — localStorage nima qiladi?
+
+✔ brauzer ichida saqlaydi
+✔ yopilganda ham o‘chmaydi
+✔ string saqlaydi (JSON ishlatish shart)
+✔ oddiy, tez, qulay
