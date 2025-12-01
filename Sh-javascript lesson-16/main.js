@@ -137,55 +137,50 @@ const priceInp = document.getElementById('price_inp');
 const numInp = document.getElementById('num_inp');
 const saveBtn = document.getElementById('save_btn');
 const productsDiv = document.getElementById('products');
+const quantitySelect = document.getElementById('quantity');
+const selectedDiv = document.getElementById('selectedQuantity');
 
+saveBtn.addEventListener('click', save);
 let users = [];
-let editIndex = -1;
+if (localStorage.getItem('users')) {
+	users = JSON.parse(localStorage.getItem('users'));
+} else {
+	users = [];
+}
 
-saveBtn.addEventListener('click', function () {
-	if (editIndex === -1) {
-		createItem();
+let editIndex = '';
+
+saveBtn.addEventListener('click', save);
+
+function save() {
+	const obj = {
+		name: nameInp.value,
+		price: priceInp.value,
+		number: numInp.value,
+	};
+
+	if (editIndex === '') {
+		users.push(obj);
 	} else {
-		updateItem();
+		users[editIndex] = obj;
+		editIndex = '';
 	}
-});
-
-function createItem() {
-	if (!nameInp.value.trim()) return alert('Kitob nomini kiriting');
-	let userObj = {
-		name: nameInp.value.trim(),
-		price: priceInp.value.trim(),
-		number: numInp.value.trim(),
-	};
-	users.push(userObj);
-	clearInputs();
-	drawProducts();
+	saveByLocal();
+	clearInput();
+	draw();
 }
 
-function updateItem() {
-	if (editIndex < 0 || editIndex >= users.length) return;
-
-	users[editIndex] = {
-		name: nameInp.value.trim(),
-		price: priceInp.value.trim(),
-		number: numInp.value.trim(),
-	};
-
-	editIndex = -1;
-	saveBtn.innerText = 'Save';
-	clearInputs();
-	drawProducts();
-}
-
-function clearInputs() {
+function clearInput() {
 	nameInp.value = '';
 	priceInp.value = '';
 	numInp.value = '';
 }
+draw();
 
-function drawProducts() {
-	let html = '';
+function draw() {
+	let res = '';
 	for (let i = 0; i < users.length; i++) {
-		html += `
+		res += `
       <div class="card p-3 mt-2">
         <h5>${users[i].name}</h5>
         <p>Narxi: ${users[i].price}</p>
@@ -197,28 +192,36 @@ function drawProducts() {
       </div>
     `;
 	}
-	productsDiv.innerHTML = html;
+	productsDiv.innerHTML = res;
 }
 
-function deleteItem(i) {
-	users.splice(i, 1);
-
-	if (editIndex === i) {
-		editIndex = -1;
-		saveBtn.innerText = 'Save';
-		clearInputs();
-	} else if (editIndex > i) {
-		editIndex--;
-	}
-	drawProducts();
+function deleteItem(index) {
+	users.splice(index, 1);
+	draw();
+	saveByLocal();
 }
 
-function editItem(i) {
-	editIndex = i;
-	nameInp.value = users[i].name;
-	priceInp.value = users[i].price;
-	numInp.value = users[i].number;
-	saveBtn.innerText = 'Update';
-
-	nameInp.focus();
+function editItem(index) {
+	editIndex = index;
+	nameInp.value = users[index].name;
+	priceInp.value = users[index].price;
+	numInp.value = users[index].number;
 }
+
+function saveByLocal() {
+	localStorage.setItem('users', JSON.stringify(users));
+}
+
+// ===========================================
+
+for (let i = 1; i <= 5; i++) {
+	const option = document.createElement('option');
+	option.value = i;
+	option.textContent = i;
+	quantitySelect.appendChild(option);
+}
+
+
+quantitySelect.addEventListener('change', e => {
+	selectedDiv.textContent = 'Tanlangan quantity: ' + e.target.value;
+});
