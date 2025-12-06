@@ -22,9 +22,62 @@
 
 		<!-- ============================== -->
 		<div class="d-flex justify-content-center">
-
+			<button id="open_form_btn" class="btn btn-outline-dark">Add Users</button>
+		</div>
+		<div id="my_form" class="card d-none w-25 mx-auto mt-3">
+			<div class="card-header bg-dark text-white text-center">Add User</div>
+			<div class="card-body">
+				<input id="firstname_inp" type="text" placeholder="firstname..." class="form-control" />
+				<input id="lastname_inp" type="text" placeholder="lastname..." class="form-control mt-2" />
+			</div>
+			<div class="card-footer">
+				<button id="save_btn" class="btn btn-dark w-100">Save</button>
+			</div>
+		</div>
+		<div class="card w-25">
+			<div class="card-header bg-success text-white text-center">Fill Balance</div>
+			<div class="card-body">
+				<select id="user_select" class="form-select">
+					<option value="" disabled selected>Select User</option>
+				</select>
+				<input id="amount_inp" class="form-control mt-2" type="number" placeholder="amount..." />
+			</div>
+			<div class="card-footer">
+				<button id="fill_balance_btn" class="btn btn-success w-100">fill+</button>
+			</div>
+		</div>
+		<div class="mt-2 mt-3 py-2 border shadow-sm px-3 d-flex justify-content-between align-content-center">
+			<div>
+				<label for="from_select">From</label>
+				<select id="from_select" class="form-control">
+					<option value="" disabled selected>Select User</option>
+				</select>
+			</div>
+			<div>
+				<label for="to_select">To</label>
+				<select id="to_select" class="form-control">
+					<option value="" disabled selected>Select User</option>
+				</select>
+			</div>
+			<div>
+				<label for="value_inp">Value</label>
+				<input id="value_inp" type="number" placeholder="enter amount" class="form-control" />
+			</div>
+			<button id="move_btn" class="btn btn-secondary w-25">move</button>
 		</div>
 
+		<table class="table mt-3">
+			<thead class="table-dark">
+				<tr>
+					<th>N</th>
+					<th>Firstname</th>
+					<th>Lastname</th>
+					<th>Balance</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody id="tbody"></tbody>
+		</table>
 		<script src="main.js"></script>
 	</body>
 </html>
