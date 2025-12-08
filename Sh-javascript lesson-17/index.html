@@ -21,7 +21,7 @@
 		</select> -->
 
 		<!-- ============================== -->
-		<div class="d-flex justify-content-center">
+		<!-- <div class="d-flex justify-content-center">
 			<button id="open_form_btn" class="btn btn-outline-dark">Add Users</button>
 		</div>
 		<div id="my_form" class="card d-none w-25 mx-auto mt-3">
@@ -77,7 +77,58 @@
 				</tr>
 			</thead>
 			<tbody id="tbody"></tbody>
-		</table>
+		</table> -->
+
+		<!-- Homework -->
+		<header class="navbar border-bottom">
+			<div class="container d-flex align-content-center justify-content-between">
+				<h1>Logo</h1>
+				<button id="open_modal_btn" class="btn btn-dark">+product</button>
+			</div>
+		</header>
+		<div id="my_container" class="container mt-2 d-flex flex-wrap gap-3">
+			<!-- card -->
+		</div>
+		<!-- moddal code-->
+
+		<!-- Modal -->
+		<div class="modal fade" id="product_modal" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Add Modal</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+					</div>
+
+					<!-- FORM -->
+					<form id="product_form">
+						<div class="modal-body">
+							<!-- image form -->
+							<div id="Image_form">
+								<label class="btn btn-outline-dark w-100 text-center">
+									Fayl yuklash
+									<input id="image_file_inp" type="file" hidden />
+								</label>
+							</div>
+
+							<input id="title_inp" type="text" placeholder="text" class="form-control mt-2" />
+							<textarea id="desc_inp" class="form-control mt-2" placeholder="description..."></textarea>
+							<input id="price_inp" type="number" placeholder="price..." class="form-control mt-2" />
+						</div>
+
+						<div class="modal-footer">
+							<button id="save_btn" type="button" class="btn btn-primary">Save</button>
+						</div>
+					</form>
+					<!-- FORM  -->
+				</div>
+			</div>
+		</div>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+			crossorigin="anonymous"></script>
 		<script src="main.js"></script>
 	</body>
 </html>
