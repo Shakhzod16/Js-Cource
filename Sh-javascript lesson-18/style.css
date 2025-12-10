@@ -1,0 +1,27 @@
+.father {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 50px;
+}
+.box {
+	width: 150px;
+	height: 150px;
+	background-color: black;
+}
+
+.section {
+	width: 500px;
+	height: 500px;
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.blue-section {
+	border: 2px solid blue;
+}
+.red-section {
+	border: 2px solid red;
+}

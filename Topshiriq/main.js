@@ -166,4 +166,31 @@ function handleFile(e) {
 	reader.readAsDataURL(file);
 }
 
+function viewUser(index) {
+	const u = users[index];
+
+	viewContainer.innerHTML = `
+    <div class="card p-3 mb-3" style="position: relative; max-width: 600px; display: flex; gap: 15px;">
+        <button onclick="closeView()"
+            style="position: absolute; top: 5px; right: 5px;"
+            class="btn btn-danger btn-sm">X</button>
+        <div>
+            <img src="${u.picture}" alt="User Image" style="width:150px; height:150px; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div style="flex: 1;">
+            <h5>${u.name}</h5>
+            <p><strong>Age:</strong> ${u.age}</p>
+            <p><strong>City:</strong> ${u.city}</p>
+            <p><strong>Email:</strong> ${u.email}</p>
+            <p><strong>Phone:</strong> ${u.phone}</p>
+            <p><strong>Position:</strong> ${u.position}</p>
+        </div>
+    </div>
+    `;
+}
+
+function closeView() {
+	viewContainer.innerHTML = '';
+}
+
 drawUsers();
