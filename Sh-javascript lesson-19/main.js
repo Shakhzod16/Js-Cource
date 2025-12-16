@@ -79,14 +79,72 @@
 // 	tbody.innerHTML = s;
 // }
 // ================================================================================
-let posts = [];
+// let posts = [];
+// const tbody = document.getElementById('tbody');
+// axios({
+// 	url: 'https://jsonplaceholder.typicode.com/posts',
+// 	method: 'get',
+// })
+// 	.then(res => {
+// 		posts = res.data;
+// 		draw();
+// 	})
+// 	.catch(err => {
+// 		console.log(err);
+// 	});
+
+// function draw() {
+// 	let s = '';
+// 	for (let i = 0; i < posts.length; i++) {
+// 		s += `
+//     <tr>
+//      <td>${posts[i].userId}</td>
+//      <td>${posts[i].id}</td>
+//      <td>${posts[i].title}</td>
+//      <td>${posts[i].body}</td>
+
+//     </tr>
+//     `;
+// 	}
+// 	tbody.innerHTML = s;
+// }
+// ===============================================
+// let albums = [];
+// const tbody = document.getElementById('tbody');
+// axios({
+// 	url: 'https://jsonplaceholder.typicode.com/albums',
+// 	method: 'get',
+// })
+// 	.then(res => {
+// 		albums = res.data;
+// 		draw();
+// 	})
+// 	.catch(err => {
+// 		console.log(err);
+// 	});
+
+// function draw() {
+// 	let s = '';
+// 	for (let i = 0; i < albums.length; i++) {
+// 		s += `
+//     <tr>
+//      <td>${albums[i].userId}</td>
+//      <td>${albums[i].id}</td>
+//      <td>${albums[i].title}</td>
+//     </tr>
+//     `;
+// 	}
+// 	tbody.innerHTML = s;
+// }
+// ============================================
+let todos = [];
 const tbody = document.getElementById('tbody');
 axios({
-	url: 'https://jsonplaceholder.typicode.com/posts',
+	url: 'https://jsonplaceholder.typicode.com/todos',
 	method: 'get',
 })
 	.then(res => {
-		posts = res.data;
+		todos = res.data;
 		draw();
 	})
 	.catch(err => {
@@ -95,14 +153,13 @@ axios({
 
 function draw() {
 	let s = '';
-	for (let i = 0; i < posts.length; i++) {
+	for (let i = 0; i < todos.length; i++) {
 		s += `
     <tr>
-     <td>${posts[i].userId}</td>
-     <td>${posts[i].id}</td>
-     <td>${posts[i].title}</td>
-     <td>${posts[i].body}</td>
-
+     <td>${todos[i].userId}</td>
+     <td>${todos[i].id}</td>
+     <td>${todos[i].title}</td>
+     <td>${todos[i].completed}</td>
     </tr>
     `;
 	}
