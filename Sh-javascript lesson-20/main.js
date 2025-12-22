@@ -3,10 +3,14 @@ const productsArea = document.getElementById('products_area');
 const form = document.getElementById('form');
 const loadingElement = document.getElementById('loading');
 
+const saveCategoryInp = document.getElementById('category_inp');
+
 const saveBtn = document.getElementById('save_btn');
+const categoryAddBtn = document.getElementById('open');
 
 openModalBtn.addEventListener('click', openModal);
 saveBtn.addEventListener('click', handleSave);
+categoryAddBtn.addEventListener('click', openCategoryModal);
 
 let products = [];
 let categorys = [];
@@ -64,7 +68,8 @@ function draw() {
        <button  class="btn btn-primary">Add card</button>
 			 <div class="btn-group gap-2">
         <button onclick="deleteProduct(${products[i].id})" class="btn btn-danger">🗑️</button>
-        <button onclick="editProduct(${products[i].id})" class="btn btn-warning">✏️</button>
+      <button onclick="editProduct(${products[i].id}) " class="btn btn-warning">✏️</button>
+
 			 </div>
 			</div>
 
@@ -76,41 +81,44 @@ function draw() {
 }
 
 function handleSave() {
+	if (!titleInp.value || !priceInp.value || !descriptionInp.value || !categoryInp.value || !imageInp.value) {
+		alert('Barcha maydonlarni to‘ldiring!');
+		return;
+	}
+
 	let productObj = {
 		title: titleInp.value,
-		price: +priceInp.value,
+		price: Number(priceInp.value),
 		description: descriptionInp.value,
-		categoryId: +categoryInp.value,
+		categoryId: Number(categoryInp.value),
 		images: [imageInp.value],
 	};
-	if ((soqchi = '')) {
-		axios({
-			url: 'https://api.escuelajs.co/api/v1/products/',
-			method: 'post',
-			data: productObj,
-		})
-			.then(ress => {
-				products = ress.data;
+
+	if (soqchi === '') {
+		axios
+			.post('https://api.escuelajs.co/api/v1/products', productObj)
+			.then(() => {
 				getProducts();
+				closeModal();
+				form.reset();
 			})
 			.catch(err => {
-				console.log(err);
+				console.log(err.response.data);
+				alert('CREATE error (400) — data noto‘g‘ri');
 			});
 	} else {
-		axios({
-			url: 'https://api.escuelajs.co/api/v1/products/ ' + soqchi,
-			method: 'put',
-			data: productObj,
-		})
-			.then(ress => {
+		axios
+			.put('https://api.escuelajs.co/api/v1/products/' + soqchi, productObj)
+			.then(() => {
 				getProducts();
 				closeModal();
 				soqchi = '';
+				form.reset();
 			})
 			.catch(err => {
-				console.log(err);
-			})
-			.finally(() => {});
+				console.log(err.response.data);
+				alert('UPDATE error');
+			});
 	}
 }
 
@@ -127,14 +135,22 @@ function deleteProduct(id) {
 		});
 }
 
-function editProduct(index) {
+function editProduct(id) {
 	openModal();
-	let currentProduct = products[index];
+
+	let currentProduct = products.find(item => item.id === id);
+
+	if (!currentProduct) {
+		console.log('Product topilmadi');
+		return;
+	}
+
 	titleInp.value = currentProduct.title;
 	descriptionInp.value = currentProduct.description;
 	priceInp.value = currentProduct.price;
 	imageInp.value = currentProduct.images[0];
 	categoryInp.value = currentProduct.category.id;
+
 	soqchi = currentProduct.id;
 }
 
@@ -178,6 +194,22 @@ function openModal() {
 
 function closeModal() {
 	const myModal = document.getElementById('product_modal');
+	const modal = bootstrap.Modal.getInstance(myModal);
+
+	document.activeElement?.blur();
+	modal.hide();
+
+	openModalBtn.focus();
+}
+
+function openCategoryModal() {
+	const myModal = document.getElementById('category_Modal');
+	const modal = new bootstrap.Modal(myModal);
+	modal.show();
+}
+
+function closeCategoryModal() {
+	const myModal = document.getElementById('category_Modal');
 	const modal = bootstrap.Modal.getInstance(myModal);
 	modal.hide();
 }
