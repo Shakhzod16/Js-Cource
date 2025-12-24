@@ -13,12 +13,18 @@
 	</head>
 	<body>
 		<div class="container py-2">
-			<div class="my-1">
+			<div class="my-1 d-flex align-items-center  justify-content-between g-3">
 				<input
 					onkeyup="handleSearch(event)"
 					type="search"
 					class="w-25 form-control mb-3"
 					placeholder="search by Title..." />
+				<select onchange="handlePagesize(event)" class="form-select w-25">
+					<option value="10">10</option>
+					<option value="20">20</option>
+					<option value="50">50</option>
+					<option value="100">100</option>
+				</select>
 			</div>
 			<table class="table">
 				<thead class="table-dark">
