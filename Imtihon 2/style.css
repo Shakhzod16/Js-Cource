@@ -1,0 +1,26 @@
+.category-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 25px;
+	padding: 40px;
+	justify-content: flex-start;
+}
+
+.category-card {
+	width: 220px;
+	height: 120px;
+	background: #cfe9ff;
+	border: 2px solid #4aa3ff;
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 22px;
+	font-weight: 500;
+	color: #2b7ecb;
+	transition: 0.3s;
+}
+
+.category-card:active {
+	background: #b9ddff;
+}
