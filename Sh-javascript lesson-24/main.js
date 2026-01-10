@@ -44,7 +44,7 @@
 // 		return false;
 // 	}
 // }
-// let result = sleepIn(true, false)
+// let result = sleepIn(true, true)
 // console.log(result)
 // 2 - masala
 // function monkeyTrouble(aSmile: boolean, bSmile: boolean): boolean {
@@ -68,7 +68,7 @@
 // 		return a * 4;
 // 	}
 // }
-// let result = sumDouble(23, 12);
+// let result = sumDouble(1, 2);
 // console.log(result);
 // 4 - masala
 // function diff21(n: number): number {
@@ -78,7 +78,7 @@
 // 		return 21 - n;
 // 	}
 // }
-// let result = diff21(2);
+// let result = diff21(19);
 // console.log(result);
 // 5 - masala
 // function parrotTrouble(talking: boolean, hour: number): boolean {
@@ -90,13 +90,13 @@
 // 		return false;
 // 	}
 // }
-// let result = parrotTrouble(true, 4);
+// let result = parrotTrouble(true, 6);
 // console.log(result);
 // 6 - masala
 // function makes10(a: number, b: number): boolean {
 // 	return a == 10 || b == 10 || a + b == 10 ? true : false;
 // }
-// let result = makes10(34, 2);
+// let result = makes10(9, 10);
 // console.log(result);
 // 7 - masala
 // function nearHundred(n: number): boolean {
@@ -105,7 +105,7 @@
 // 	}
 // 	return false;
 // }
-// let result = nearHundred(3);
+// let result = nearHundred(89);
 // console.log(result);
 // 8 - masala
 // function posNeg(a: number, b: number, negative: boolean) {
@@ -119,7 +119,7 @@
 // 		return false;
 // 	}
 // }
-// let result = posNeg(23, 4, true);
+// let result = posNeg(1, -1, false);
 // console.log(result);
 // 9 - masala
 // function notString(str: string): string {
@@ -132,6 +132,11 @@
 // let result = notString('candy');
 // console.log(result);
 // 10 - masala 🟥
+// function missingChar(str: string, n: number) {
+// 	return str.slice(0, n) + str.slice(n + 1);
+// }
+// let result = missingChar('hello', 2);
+// console.log(result);
 // 11 - masala
 // function frontBack(str: string): string {
 // 	if (str.length <= 1) return str;
@@ -317,6 +322,15 @@
 // let result = max1020(11, 19);
 // console.log(result);
 // 28 - masala 🟥
+// function stringE(str: string): boolean {
+// 	let count = 0;
+// 	for (let i = 0; i < str.length; i++) {
+// 		if (str[i] === 'e') count++;
+// 	}
+// 	return count >= 1 && count <= 3;
+// }
+// let result = stringE('Heeelloe');
+// console.log(result);
 // 29 - masala
 // function lastDigit(a: number, b: number): boolean {
 // 	let bir1 = a % 10;
@@ -340,4 +354,13 @@
 // let result = endUp('Hello');
 // console.log(result);
 // 31 - masala 🟥
+// function everyNth(str: string, n: number): string {
+// 	let result = '';
+// 	for (let i = 0; i < str.length; i += n) {
+// 		result += str[i];
+// 	}
+// 	return result;
+// }
+// let result = everyNth('Miracle', 2);
+// console.log(result);
 //# sourceMappingURL=main.js.map
